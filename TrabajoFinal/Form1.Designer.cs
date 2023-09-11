@@ -37,6 +37,7 @@
             this.BtnMaxi = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.OFF = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Btn_Soli_Info = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             BtnAyuda = new System.Windows.Forms.Button();
             this.Barra_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMini)).BeginInit();
@@ -138,6 +138,12 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
             // OFF
             // 
             resources.ApplyResources(this.OFF, "OFF");
@@ -212,12 +218,6 @@
             resources.ApplyResources(this.Contenedor, "Contenedor");
             this.Contenedor.Name = "Contenedor";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -228,6 +228,7 @@
             this.Controls.Add(this.Barra_Control);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Barra_Control.ResumeLayout(false);
             this.Barra_Control.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMini)).EndInit();
