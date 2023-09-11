@@ -1,0 +1,10 @@
+C:\RosalesC#\TrabajoFinal\bin\Debug\TrabajoFinal.exe.config
+C:\RosalesC#\TrabajoFinal\bin\Debug\TrabajoFinal.exe
+C:\RosalesC#\TrabajoFinal\bin\Debug\TrabajoFinal.pdb
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.csproj.AssemblyReference.cache
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.Form1.resources
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.Properties.Resources.resources
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.csproj.GenerateResource.cache
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.csproj.CoreCompileInputs.cache
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.exe
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.pdb
