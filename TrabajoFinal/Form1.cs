@@ -92,5 +92,10 @@ namespace TrabajoFinal
         {
             AbrirFormHija(new Inicio());
         }
+
+        private void Restablecer_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Restablecer());
+        }
     }
 }

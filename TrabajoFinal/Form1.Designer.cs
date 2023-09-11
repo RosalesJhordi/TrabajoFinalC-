@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.Button BtnAyuda;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.Button button1;
+            System.Windows.Forms.Button Restablecer;
             this.Barra_Control = new System.Windows.Forms.Panel();
             this.BtnMini = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@
             this.BtnMaxi = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.OFF = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -49,9 +50,8 @@
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             BtnAyuda = new System.Windows.Forms.Button();
-            button1 = new System.Windows.Forms.Button();
+            Restablecer = new System.Windows.Forms.Button();
             this.Barra_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnOcul)).BeginInit();
@@ -72,6 +72,17 @@
             BtnAyuda.ForeColor = System.Drawing.Color.White;
             BtnAyuda.Name = "BtnAyuda";
             BtnAyuda.UseVisualStyleBackColor = false;
+            // 
+            // Restablecer
+            // 
+            resources.ApplyResources(Restablecer, "Restablecer");
+            Restablecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            Restablecer.FlatAppearance.BorderSize = 0;
+            Restablecer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            Restablecer.ForeColor = System.Drawing.Color.White;
+            Restablecer.Name = "Restablecer";
+            Restablecer.UseVisualStyleBackColor = false;
+            Restablecer.Click += new System.EventHandler(this.Restablecer_Click);
             // 
             // Barra_Control
             // 
@@ -126,7 +137,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(button1);
+            this.panel1.Controls.Add(Restablecer);
             this.panel1.Controls.Add(this.flowLayoutPanel2);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.OFF);
@@ -142,6 +153,12 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             // 
             // flowLayoutPanel1
             // 
@@ -224,22 +241,6 @@
             this.Contenedor.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.Contenedor, "Contenedor");
             this.Contenedor.Name = "Contenedor";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            resources.ApplyResources(this.flowLayoutPanel2, "flowLayoutPanel2");
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(button1, "button1");
-            button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            button1.ForeColor = System.Drawing.Color.White;
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
