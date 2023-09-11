@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -20,7 +22,7 @@ namespace TrabajoFinal.FormHijas
             Prestigio.ChartAreas.Add(radarArea); //agregamos
             Prestigio.Height = 350; //le damos una altura
             Series radarSeries = new Series("Prestigio");// creamos una serie que seria como la leyenda
-            radarSeries.Color = Color.Blue;//le damos color al radar
+            radarSeries.Color = Color.Salmon;//le damos color al radar
             radarSeries.IsValueShownAsLabel = true;//hacermos visbles los valores en las q esta
             Prestigio.Series.Add(radarSeries);//Agregamos la serie
             double[] valores = { 100, 100, 100, 100, 100 };//creamos los valores q se cargaran al radar
@@ -30,53 +32,51 @@ namespace TrabajoFinal.FormHijas
 
             try
             {
-                conn = new SqlConnection(connectionString); //creamos la conexion a la bd
-                conn.Open(); //abrimos la conexion
-
-                // Consulta SQL para contar estudiantes de secundaria
-                string querySecundaria = "SELECT COUNT(*) FROM Estudiante WHERE Nivel = 'SECUNDARIA'";
-                // Consulta SQL para contar estudiantes de primaria
-                string queryPrimaria = "SELECT COUNT(*) FROM Estudiante WHERE Nivel = 'PRIMARIA'";
-
-                using (SqlCommand commandSecundaria = new SqlCommand(querySecundaria, conn))
-                using (SqlCommand commandPrimaria = new SqlCommand(queryPrimaria, conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    int countSecundaria = (int)commandSecundaria.ExecuteScalar(); // Estudiantes de secundaria
-                    int countPrimaria = (int)commandPrimaria.ExecuteScalar(); // Estudiantes de primaria
+                    conn.Open();
 
-                    // Configurar el gráfico
                     ChartArea chartArea = Cantidad.ChartAreas[0];
-                    chartArea.AxisX.Title = "Nivel Académico";
+                    chartArea.AxisX.Title = "Alumnos";
 
-                    // Crear una serie de datos
                     Series series2 = new Series("Series2");
                     series2.ChartType = SeriesChartType.Doughnut;
-                    series2.IsValueShownAsLabel = true;
-
-                    // Configurar los colores de las secciones
-                    series2.Palette = ChartColorPalette.SeaGreen;
+                    series2.Palette = ChartColorPalette.SeaGreen; // Paleta de colores para las porciones de la dona
                     series2.CustomProperties = "DoughnutRadius=60, PieDrawingStyle=Concave";
 
-                    // Agregar puntos al gráfico con las cantidades y colores adecuados
-                    DataPoint dataPointSecundaria = new DataPoint();
-                    dataPointSecundaria.SetValueY(countSecundaria);
-                    dataPointSecundaria.Label = "Secundaria";
+                    Dictionary<string, string> nivelQueries = new Dictionary<string, string>
+                    {
+                        { "Secundaria", "SECUNDARIA" },
+                        { "Primaria", "PRIMARIA" },
+                        { "Inicial", "INICIAL" }
+                    };
 
-                    DataPoint dataPointPrimaria = new DataPoint();
-                    dataPointPrimaria.SetValueY(countPrimaria);
-                    dataPointPrimaria.Label = "Primaria";
+                    // Definir colores específicos para cada nivel
+                    Color[] colors = new Color[] { Color.Blue, Color.Red, Color.Green };
 
-                    DataPoint dataPointInicial = new DataPoint();
-                    dataPointInicial.SetValueY(countPrimaria);
-                    dataPointInicial.Label = "Inicial";
+                    for (int i = 0; i < nivelQueries.Count; i++)
+                    {
+                        string nivel = nivelQueries.ElementAt(i).Key;
+                        string query = "SELECT COUNT(*) FROM Estudiantes WHERE Nivel = @Nivel";
 
-                    series2.Points.Add(dataPointSecundaria);
-                    series2.Points.Add(dataPointPrimaria);
-                    series2.Points.Add(dataPointInicial);
+                        using (SqlCommand command = new SqlCommand(query, conn))
+                        {
+                            command.Parameters.AddWithValue("@Nivel", nivelQueries.ElementAt(i).Value);
+                            int count = (int)command.ExecuteScalar();
 
-                    // Agregar la serie al gráfico
+                            DataPoint dataPoint = new DataPoint();
+                            dataPoint.SetValueY(count);
+                            dataPoint.IsValueShownAsLabel = true;
+                            dataPoint.Label = nivel; // Mostrar solo el nivel en la leyenda
+                            dataPoint.Color = colors[i]; // Asignar un color específico
+
+                            series2.Points.Add(dataPoint);
+                        }
+                    }
+
                     Cantidad.Series.Add(series2);
                 }
+
             }
             catch (Exception ex)
             {

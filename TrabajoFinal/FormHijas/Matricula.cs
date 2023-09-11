@@ -109,7 +109,7 @@ namespace TrabajoFinal.FormHijas
 
                 conn = new SqlConnection(connectionString); //creamos la conexion a la bd
                 conn.Open();
-                string query = "INSERT INTO Estudiante (Id,Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) VALUES (1,@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
+                string query = "INSERT INTO Estudiantes (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@nom", nom);

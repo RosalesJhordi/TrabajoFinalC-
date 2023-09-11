@@ -102,5 +102,10 @@ namespace TrabajoFinal
         {
             AbrirFormHija(new Matricula());
         }
+
+        private void Btn_Soli_Info_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Informacion());
+        }
     }
 }

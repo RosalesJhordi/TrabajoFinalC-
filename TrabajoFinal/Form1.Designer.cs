@@ -173,6 +173,7 @@
             this.Btn_Soli_Info.ForeColor = System.Drawing.Color.White;
             this.Btn_Soli_Info.Name = "Btn_Soli_Info";
             this.Btn_Soli_Info.UseVisualStyleBackColor = false;
+            this.Btn_Soli_Info.Click += new System.EventHandler(this.Btn_Soli_Info_Click);
             // 
             // BtnMatricula
             // 
