@@ -9,3 +9,4 @@ C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.csproj.CoreCompileInputs.cache
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.exe
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.pdb
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Inicio.resources
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Login.resources

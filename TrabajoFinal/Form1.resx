@@ -181,6 +181,90 @@
   <data name="&gt;&gt;BtnAyuda.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;BtnMini.Name" xml:space="preserve">
+    <value>BtnMini</value>
+  </data>
+  <data name="&gt;&gt;BtnMini.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnMini.Parent" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;BtnMini.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BtnOcul.Name" xml:space="preserve">
+    <value>BtnOcul</value>
+  </data>
+  <data name="&gt;&gt;BtnOcul.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnOcul.Parent" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;BtnOcul.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;BtnMaxi.Name" xml:space="preserve">
+    <value>BtnMaxi</value>
+  </data>
+  <data name="&gt;&gt;BtnMaxi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnMaxi.Parent" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;BtnMaxi.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;BtnCerrar.Name" xml:space="preserve">
+    <value>BtnCerrar</value>
+  </data>
+  <data name="&gt;&gt;BtnCerrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnCerrar.Parent" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;BtnCerrar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Barra_Control.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="Barra_Control.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Barra_Control.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1282, 40</value>
+  </data>
+  <data name="Barra_Control.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Barra_Control.Name" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;Barra_Control.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Barra_Control.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Barra_Control.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="BtnMini.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -563,30 +647,6 @@
   </data>
   <data name="&gt;&gt;BtnCerrar.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="Barra_Control.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="Barra_Control.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Barra_Control.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1282, 40</value>
-  </data>
-  <data name="Barra_Control.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Barra_Control.Name" xml:space="preserve">
-    <value>Barra_Control</value>
-  </data>
-  <data name="&gt;&gt;Barra_Control.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Barra_Control.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Barra_Control.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 214</value>

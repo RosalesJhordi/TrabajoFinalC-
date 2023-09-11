@@ -82,5 +82,15 @@ namespace TrabajoFinal
         {
             AbrirFormHija(new Inicio());
         }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Login());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Inicio());
+        }
     }
 }
