@@ -97,5 +97,10 @@ namespace TrabajoFinal
         {
             AbrirFormHija(new Restablecer());
         }
+
+        private void BtnMatricula_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Matricula());
+        }
     }
 }

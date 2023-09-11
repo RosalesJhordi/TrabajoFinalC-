@@ -72,6 +72,12 @@
     <Compile Include="FormHijas\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHijas\Matricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHijas\Matricula.Designer.cs">
+      <DependentUpon>Matricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHijas\Restablecer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHijas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHijas\Matricula.resx">
+      <DependentUpon>Matricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHijas\Restablecer.resx">
       <DependentUpon>Restablecer.cs</DependentUpon>

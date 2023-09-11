@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button BtnAyuda;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Button Restablecer;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Barra_Control = new System.Windows.Forms.Panel();
             this.BtnMini = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,13 +43,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Btn_Soli_Info = new System.Windows.Forms.Button();
             this.BtnMatricula = new System.Windows.Forms.Button();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Contenedor = new System.Windows.Forms.Panel();
-            BtnAyuda = new System.Windows.Forms.Button();
             Restablecer = new System.Windows.Forms.Button();
             this.Barra_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMini)).BeginInit();
@@ -62,16 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnAyuda
-            // 
-            resources.ApplyResources(BtnAyuda, "BtnAyuda");
-            BtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            BtnAyuda.FlatAppearance.BorderSize = 0;
-            BtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            BtnAyuda.ForeColor = System.Drawing.Color.White;
-            BtnAyuda.Name = "BtnAyuda";
-            BtnAyuda.UseVisualStyleBackColor = false;
             // 
             // Restablecer
             // 
@@ -142,10 +129,8 @@
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.OFF);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(BtnAyuda);
             this.panel1.Controls.Add(this.Btn_Soli_Info);
             this.panel1.Controls.Add(this.BtnMatricula);
-            this.panel1.Controls.Add(this.flowLayoutPanel5);
             this.panel1.Controls.Add(this.flowLayoutPanel4);
             this.panel1.Controls.Add(this.flowLayoutPanel3);
             this.panel1.Controls.Add(this.BtnLogin);
@@ -198,12 +183,7 @@
             this.BtnMatricula.ForeColor = System.Drawing.Color.White;
             this.BtnMatricula.Name = "BtnMatricula";
             this.BtnMatricula.UseVisualStyleBackColor = false;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            resources.ApplyResources(this.flowLayoutPanel5, "flowLayoutPanel5");
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.BtnMatricula.Click += new System.EventHandler(this.BtnMatricula_Click);
             // 
             // flowLayoutPanel4
             // 
@@ -279,7 +259,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button Btn_Soli_Info;
         private System.Windows.Forms.Button BtnMatricula;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button BtnLogin;
