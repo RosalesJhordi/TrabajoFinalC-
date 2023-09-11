@@ -47,5 +47,10 @@ namespace TrabajoFinal.FormHijas
             // Mostrar la ventana emergente como modal
             popup.ShowDialog();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

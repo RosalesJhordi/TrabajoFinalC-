@@ -35,34 +35,37 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.input_ape = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.input_telefono = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.input_direcion = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.input_email = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Ver = new System.Windows.Forms.PictureBox();
+            this.input_pwd = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Opciones = new System.Windows.Forms.ComboBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Btn_Selecionar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.Perfil = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,11 +77,14 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Perfil)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,23 +144,23 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.input_ape);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Location = new System.Drawing.Point(156, 209);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(291, 43);
             this.panel2.TabIndex = 12;
             // 
-            // textBox1
+            // input_ape
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(60, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 40);
-            this.textBox1.TabIndex = 11;
+            this.input_ape.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_ape.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_ape.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_ape.Location = new System.Drawing.Point(60, 0);
+            this.input_ape.Multiline = true;
+            this.input_ape.Name = "input_ape";
+            this.input_ape.Size = new System.Drawing.Size(228, 40);
+            this.input_ape.TabIndex = 11;
             // 
             // pictureBox3
             // 
@@ -170,23 +176,23 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.input_telefono);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(154, 313);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(291, 43);
             this.panel3.TabIndex = 13;
             // 
-            // textBox2
+            // input_telefono
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(60, 0);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 40);
-            this.textBox2.TabIndex = 11;
+            this.input_telefono.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_telefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_telefono.Location = new System.Drawing.Point(60, 0);
+            this.input_telefono.Multiline = true;
+            this.input_telefono.Name = "input_telefono";
+            this.input_telefono.Size = new System.Drawing.Size(228, 40);
+            this.input_telefono.TabIndex = 11;
             // 
             // pictureBox4
             // 
@@ -224,23 +230,23 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.input_direcion);
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Location = new System.Drawing.Point(156, 410);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(291, 43);
             this.panel4.TabIndex = 16;
             // 
-            // textBox3
+            // input_direcion
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(60, 0);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(228, 40);
-            this.textBox3.TabIndex = 11;
+            this.input_direcion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_direcion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_direcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_direcion.Location = new System.Drawing.Point(60, 0);
+            this.input_direcion.Multiline = true;
+            this.input_direcion.Name = "input_direcion";
+            this.input_direcion.Size = new System.Drawing.Size(228, 40);
+            this.input_direcion.TabIndex = 11;
             // 
             // pictureBox5
             // 
@@ -267,23 +273,23 @@
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.input_email);
             this.panel5.Controls.Add(this.pictureBox6);
             this.panel5.Location = new System.Drawing.Point(509, 110);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(291, 43);
             this.panel5.TabIndex = 18;
             // 
-            // textBox4
+            // input_email
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(60, 0);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(228, 40);
-            this.textBox4.TabIndex = 11;
+            this.input_email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_email.Location = new System.Drawing.Point(60, 0);
+            this.input_email.Multiline = true;
+            this.input_email.Name = "input_email";
+            this.input_email.Size = new System.Drawing.Size(228, 40);
+            this.input_email.TabIndex = 11;
             // 
             // pictureBox6
             // 
@@ -299,23 +305,51 @@
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.pictureBox9);
+            this.panel6.Controls.Add(this.Ver);
+            this.panel6.Controls.Add(this.input_pwd);
             this.panel6.Controls.Add(this.pictureBox7);
             this.panel6.Location = new System.Drawing.Point(509, 209);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(291, 43);
+            this.panel6.Size = new System.Drawing.Size(354, 43);
             this.panel6.TabIndex = 19;
             // 
-            // textBox5
+            // pictureBox9
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(60, 0);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(228, 40);
-            this.textBox5.TabIndex = 11;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Location = new System.Drawing.Point(306, 0);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(45, 43);
+            this.pictureBox9.TabIndex = 29;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Visible = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // Ver
+            // 
+            this.Ver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ver.BackgroundImage")));
+            this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Ver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ver.Location = new System.Drawing.Point(304, 0);
+            this.Ver.Name = "Ver";
+            this.Ver.Size = new System.Drawing.Size(45, 43);
+            this.Ver.TabIndex = 28;
+            this.Ver.TabStop = false;
+            this.Ver.Click += new System.EventHandler(this.Ver_Click);
+            // 
+            // input_pwd
+            // 
+            this.input_pwd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_pwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_pwd.Location = new System.Drawing.Point(66, 0);
+            this.input_pwd.Multiline = true;
+            this.input_pwd.Name = "input_pwd";
+            this.input_pwd.Size = new System.Drawing.Size(228, 40);
+            this.input_pwd.TabIndex = 11;
+            this.input_pwd.TextChanged += new System.EventHandler(this.input_pwd_TextChanged);
             // 
             // pictureBox7
             // 
@@ -364,23 +398,21 @@
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.Opciones);
             this.panel7.Controls.Add(this.pictureBox8);
             this.panel7.Location = new System.Drawing.Point(509, 313);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(291, 43);
             this.panel7.TabIndex = 23;
             // 
-            // textBox6
+            // Opciones
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(60, 0);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(228, 40);
-            this.textBox6.TabIndex = 11;
+            this.Opciones.FormattingEnabled = true;
+            this.Opciones.Location = new System.Drawing.Point(60, 11);
+            this.Opciones.Name = "Opciones";
+            this.Opciones.Size = new System.Drawing.Size(228, 24);
+            this.Opciones.TabIndex = 1;
+            this.Opciones.SelectedIndexChanged += new System.EventHandler(this.Opciones_SelectedIndexChanged);
             // 
             // pictureBox8
             // 
@@ -407,23 +439,28 @@
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel8.Controls.Add(this.textBox7);
+            this.panel8.Controls.Add(this.Btn_Selecionar);
             this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Location = new System.Drawing.Point(509, 410);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(291, 43);
             this.panel8.TabIndex = 25;
             // 
-            // textBox7
+            // Btn_Selecionar
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(60, 0);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(228, 40);
-            this.textBox7.TabIndex = 11;
+            this.Btn_Selecionar.BackColor = System.Drawing.Color.White;
+            this.Btn_Selecionar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Selecionar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Btn_Selecionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.Btn_Selecionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.Btn_Selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Selecionar.Location = new System.Drawing.Point(60, 0);
+            this.Btn_Selecionar.Name = "Btn_Selecionar";
+            this.Btn_Selecionar.Size = new System.Drawing.Size(227, 42);
+            this.Btn_Selecionar.TabIndex = 1;
+            this.Btn_Selecionar.Text = "Selecionar imagen";
+            this.Btn_Selecionar.UseVisualStyleBackColor = false;
+            this.Btn_Selecionar.Click += new System.EventHandler(this.Btn_Selecionar_Click);
             // 
             // pictureBox1
             // 
@@ -440,6 +477,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(356, 499);
@@ -448,6 +486,17 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Matricular";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Perfil
+            // 
+            this.Perfil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Perfil.Location = new System.Drawing.Point(815, 479);
+            this.Perfil.Name = "Perfil";
+            this.Perfil.Size = new System.Drawing.Size(124, 108);
+            this.Perfil.TabIndex = 27;
+            this.Perfil.TabStop = false;
             // 
             // Matricula
             // 
@@ -455,6 +504,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(938, 586);
+            this.Controls.Add(this.Perfil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label9);
@@ -494,13 +544,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Perfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,33 +565,36 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox input_ape;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox input_telefono;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox input_direcion;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox input_email;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox input_pwd;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox Opciones;
+        private System.Windows.Forms.Button Btn_Selecionar;
+        private System.Windows.Forms.PictureBox Perfil;
+        private System.Windows.Forms.PictureBox Ver;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

@@ -34,9 +34,9 @@ namespace TrabajoFinal.FormHijas
                 conn.Open(); //abrimos la conexion
 
                 // Consulta SQL para contar estudiantes de secundaria
-                string querySecundaria = "SELECT COUNT(*) FROM Estudiantes WHERE Nivel = 'Secundaria'";
+                string querySecundaria = "SELECT COUNT(*) FROM Estudiante WHERE Nivel = 'SECUNDARIA'";
                 // Consulta SQL para contar estudiantes de primaria
-                string queryPrimaria = "SELECT COUNT(*) FROM Estudiantes WHERE Nivel = 'Primaria'";
+                string queryPrimaria = "SELECT COUNT(*) FROM Estudiante WHERE Nivel = 'PRIMARIA'";
 
                 using (SqlCommand commandSecundaria = new SqlCommand(querySecundaria, conn))
                 using (SqlCommand commandPrimaria = new SqlCommand(queryPrimaria, conn))
