@@ -162,6 +162,7 @@
             this.Link_OlvidoPwd.TabIndex = 8;
             this.Link_OlvidoPwd.TabStop = true;
             this.Link_OlvidoPwd.Text = "Olvidaste tu Contraseña ?";
+            this.Link_OlvidoPwd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_OlvidoPwd_LinkClicked);
             // 
             // btn_login
             // 

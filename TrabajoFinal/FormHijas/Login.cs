@@ -38,5 +38,14 @@ namespace TrabajoFinal.FormHijas
         {
             input_pwd.PasswordChar = '*';//Convierte el exto en *
         }
+
+        private void Link_OlvidoPwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Crear una instancia del formulario emergente
+            Dialogo popup = new Dialogo();
+
+            // Mostrar la ventana emergente como modal
+            popup.ShowDialog();
+        }
     }
 }
