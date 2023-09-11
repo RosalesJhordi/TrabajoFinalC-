@@ -32,15 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.input_email = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.NoVerPwd = new System.Windows.Forms.PictureBox();
             this.VerPwd = new System.Windows.Forms.PictureBox();
             this.input_pwd = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.Link_OlvidoPwd = new System.Windows.Forms.LinkLabel();
+            this.btn_login = new System.Windows.Forms.Button();
+            this.input_email = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,22 +75,11 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.input_email);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(278, 295);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(401, 43);
             this.panel1.TabIndex = 5;
-            // 
-            // input_email
-            // 
-            this.input_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_email.Location = new System.Drawing.Point(54, 1);
-            this.input_email.Multiline = true;
-            this.input_email.Name = "input_email";
-            this.input_email.Size = new System.Drawing.Size(296, 40);
-            this.input_email.TabIndex = 1;
-            this.input_email.UseWaitCursor = true;
             // 
             // pictureBox1
             // 
@@ -161,37 +150,48 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.CausesValidation = false;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageKey = "(ninguno)";
-            this.button2.Location = new System.Drawing.Point(386, 455);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 43);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Login";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // Link_OlvidoPwd
             // 
             this.Link_OlvidoPwd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Link_OlvidoPwd.AutoSize = true;
             this.Link_OlvidoPwd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Link_OlvidoPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Link_OlvidoPwd.Location = new System.Drawing.Point(382, 539);
+            this.Link_OlvidoPwd.Location = new System.Drawing.Point(391, 531);
             this.Link_OlvidoPwd.Name = "Link_OlvidoPwd";
             this.Link_OlvidoPwd.Size = new System.Drawing.Size(203, 20);
             this.Link_OlvidoPwd.TabIndex = 8;
             this.Link_OlvidoPwd.TabStop = true;
             this.Link_OlvidoPwd.Text = "Olvidaste tu Contraseña ?";
+            // 
+            // btn_login
+            // 
+            this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_login.BackColor = System.Drawing.Color.Blue;
+            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_login.FlatAppearance.BorderSize = 0;
+            this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.Color.White;
+            this.btn_login.Location = new System.Drawing.Point(409, 460);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(163, 40);
+            this.btn_login.TabIndex = 9;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = false;
+            // 
+            // input_email
+            // 
+            this.input_email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_email.Location = new System.Drawing.Point(330, 296);
+            this.input_email.Multiline = true;
+            this.input_email.Name = "input_email";
+            this.input_email.Size = new System.Drawing.Size(296, 40);
+            this.input_email.TabIndex = 10;
             // 
             // Login
             // 
@@ -199,8 +199,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(956, 633);
+            this.Controls.Add(this.input_email);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.Link_OlvidoPwd);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
@@ -210,7 +211,6 @@
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -227,14 +227,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox input_email;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox NoVerPwd;
         private System.Windows.Forms.PictureBox VerPwd;
         private System.Windows.Forms.TextBox input_pwd;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.LinkLabel Link_OlvidoPwd;
+        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.TextBox input_email;
     }
 }

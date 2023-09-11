@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrabajoFinal.FormHijas
 {
     public partial class Login : Form
     {
+        public int borderradius;
         public Login()
         {
             InitializeComponent();
+            btn_login.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, btn_login.Width, btn_login.Height, 5, 5));
         }
-
+        // Función para crear un región de botón con esquinas redondeadas
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        public static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
         private void VerPwd_Click(object sender, EventArgs e)
         {
             NoVerPwd.Visible = true; //img no ver visible

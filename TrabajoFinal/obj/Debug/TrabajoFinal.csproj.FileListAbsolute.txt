@@ -10,3 +10,4 @@ C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.exe
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.pdb
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Inicio.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Login.resources
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Restablecer.resources
