@@ -34,7 +34,7 @@
             this.input_email = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.input_ape = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,12 +49,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ReLoad1 = new System.Windows.Forms.PictureBox();
-            this.SinSonido = new System.Windows.Forms.PictureBox();
-            this.Sonido = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.ReLoad2 = new System.Windows.Forms.PictureBox();
+            this.ReLoad1 = new System.Windows.Forms.PictureBox();
+            this.Sonido = new System.Windows.Forms.PictureBox();
+            this.Captcha = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.input_captcha = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Btn_camb = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,10 +70,11 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReLoad1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SinSonido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sonido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReLoad2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReLoad1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sonido)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,23 +123,23 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.input_ape);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(520, 127);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(383, 43);
             this.panel2.TabIndex = 7;
             // 
-            // textBox1
+            // input_ape
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(62, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 40);
-            this.textBox1.TabIndex = 11;
+            this.input_ape.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_ape.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_ape.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_ape.Location = new System.Drawing.Point(62, 0);
+            this.input_ape.Multiline = true;
+            this.input_ape.Name = "input_ape";
+            this.input_ape.Size = new System.Drawing.Size(318, 40);
+            this.input_ape.TabIndex = 11;
             // 
             // pictureBox2
             // 
@@ -289,72 +294,13 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel5.Controls.Add(this.ReLoad2);
             this.panel5.Controls.Add(this.ReLoad1);
-            this.panel5.Controls.Add(this.SinSonido);
             this.panel5.Controls.Add(this.Sonido);
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.Captcha);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Location = new System.Drawing.Point(41, 304);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(384, 246);
             this.panel5.TabIndex = 15;
-            // 
-            // ReLoad1
-            // 
-            this.ReLoad1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReLoad1.BackgroundImage")));
-            this.ReLoad1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ReLoad1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReLoad1.Location = new System.Drawing.Point(195, 186);
-            this.ReLoad1.Name = "ReLoad1";
-            this.ReLoad1.Size = new System.Drawing.Size(55, 43);
-            this.ReLoad1.TabIndex = 19;
-            this.ReLoad1.TabStop = false;
-            this.ReLoad1.Click += new System.EventHandler(this.ReLoad1_Click);
-            // 
-            // SinSonido
-            // 
-            this.SinSonido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SinSonido.BackgroundImage")));
-            this.SinSonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SinSonido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SinSonido.Location = new System.Drawing.Point(107, 186);
-            this.SinSonido.Name = "SinSonido";
-            this.SinSonido.Size = new System.Drawing.Size(55, 43);
-            this.SinSonido.TabIndex = 18;
-            this.SinSonido.TabStop = false;
-            this.SinSonido.Visible = false;
-            this.SinSonido.Click += new System.EventHandler(this.SinSonido_Click);
-            // 
-            // Sonido
-            // 
-            this.Sonido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sonido.BackgroundImage")));
-            this.Sonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Sonido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Sonido.Location = new System.Drawing.Point(107, 186);
-            this.Sonido.Name = "Sonido";
-            this.Sonido.Size = new System.Drawing.Size(55, 43);
-            this.Sonido.TabIndex = 17;
-            this.Sonido.TabStop = false;
-            this.Sonido.Click += new System.EventHandler(this.Sonido_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(64, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(235, 51);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "CAPTCHA";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(119, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 29);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Captcha";
             // 
             // ReLoad2
             // 
@@ -369,12 +315,121 @@
             this.ReLoad2.Visible = false;
             this.ReLoad2.Click += new System.EventHandler(this.ReLoad2_Click);
             // 
+            // ReLoad1
+            // 
+            this.ReLoad1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReLoad1.BackgroundImage")));
+            this.ReLoad1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ReLoad1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReLoad1.Location = new System.Drawing.Point(195, 186);
+            this.ReLoad1.Name = "ReLoad1";
+            this.ReLoad1.Size = new System.Drawing.Size(55, 43);
+            this.ReLoad1.TabIndex = 19;
+            this.ReLoad1.TabStop = false;
+            this.ReLoad1.Click += new System.EventHandler(this.ReLoad1_Click);
+            // 
+            // Sonido
+            // 
+            this.Sonido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sonido.BackgroundImage")));
+            this.Sonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Sonido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sonido.Location = new System.Drawing.Point(107, 186);
+            this.Sonido.Name = "Sonido";
+            this.Sonido.Size = new System.Drawing.Size(55, 43);
+            this.Sonido.TabIndex = 17;
+            this.Sonido.TabStop = false;
+            this.Sonido.Click += new System.EventHandler(this.Sonido_Click);
+            // 
+            // Captcha
+            // 
+            this.Captcha.AutoSize = true;
+            this.Captcha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Captcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Captcha.Location = new System.Drawing.Point(54, 67);
+            this.Captcha.Name = "Captcha";
+            this.Captcha.Padding = new System.Windows.Forms.Padding(20);
+            this.Captcha.Size = new System.Drawing.Size(275, 91);
+            this.Captcha.TabIndex = 16;
+            this.Captcha.Text = "CAPTCHA";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(119, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 29);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Captcha";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(515, 328);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(182, 25);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Introduzca Captcha";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel6.Controls.Add(this.input_captcha);
+            this.panel6.Controls.Add(this.pictureBox5);
+            this.panel6.Location = new System.Drawing.Point(520, 371);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(383, 43);
+            this.panel6.TabIndex = 17;
+            // 
+            // input_captcha
+            // 
+            this.input_captcha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.input_captcha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.input_captcha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_captcha.Location = new System.Drawing.Point(62, 0);
+            this.input_captcha.Multiline = true;
+            this.input_captcha.Name = "input_captcha";
+            this.input_captcha.Size = new System.Drawing.Size(318, 40);
+            this.input_captcha.TabIndex = 11;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(45, 43);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // Btn_camb
+            // 
+            this.Btn_camb.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_camb.BackColor = System.Drawing.Color.Red;
+            this.Btn_camb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_camb.FlatAppearance.BorderSize = 0;
+            this.Btn_camb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btn_camb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_camb.ForeColor = System.Drawing.Color.White;
+            this.Btn_camb.Location = new System.Drawing.Point(598, 489);
+            this.Btn_camb.Name = "Btn_camb";
+            this.Btn_camb.Size = new System.Drawing.Size(252, 44);
+            this.Btn_camb.TabIndex = 19;
+            this.Btn_camb.Text = "Restablecer";
+            this.Btn_camb.UseVisualStyleBackColor = false;
+            this.Btn_camb.Click += new System.EventHandler(this.Btn_camb_Click);
+            // 
             // Restablecer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(938, 586);
+            this.Controls.Add(this.Btn_camb);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -405,10 +460,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReLoad1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SinSonido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Sonido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReLoad2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReLoad1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sonido)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,7 +478,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox input_email;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox input_ape;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -434,13 +491,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Captcha;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox Sonido;
         private System.Windows.Forms.PictureBox ReLoad1;
-        private System.Windows.Forms.PictureBox SinSonido;
         private System.Windows.Forms.PictureBox Ver;
         private System.Windows.Forms.PictureBox NoVer;
         private System.Windows.Forms.PictureBox ReLoad2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox input_captcha;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button Btn_camb;
     }
 }
