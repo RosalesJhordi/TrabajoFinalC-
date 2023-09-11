@@ -55,5 +55,27 @@ namespace TrabajoFinal
             SendMessage(Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
             
         }
+
+        private void OFF_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // metodo para abrir un form hija sin cerrar
+        private void AbrirFormHija(object formHija)
+        {
+            // Elimina todos los controles existentes en el form
+            foreach (Control control in this.Contenedor.Controls)
+            {
+                control.Dispose();
+            }
+
+            Form formHijo = formHija as Form;
+            formHijo.TopLevel = false;
+            formHijo.Dock = DockStyle.Fill;
+            this.Contenedor.Controls.Add(formHijo);
+            this.Contenedor.Tag = formHijo;
+            formHijo.Show();
+        }
     }
 }
