@@ -117,41 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <metadata name="BtnAyuda.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnAyuda.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="BtnAyuda.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="BtnAyuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
+  <data name="BtnAyuda.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Berlin Sans FB Demi, 10.2pt, style=Bold</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="BtnAyuda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCQkVCiv7M9wwAAABm0lEQVRIS62Wy0oDMRSG6zt4pV52
+        LnwE0bUgWlyJ6AtIbfVZ3FnQjUvXVn0J163gFfeCl51K/f7kTLEwk2SqH3yQSU9OpsmZzFRC9Hq9WWzi
+        FXbxw+zgBe7htIWnw6AqtvALY3zjGc7Z8DAEbuA7luUN1y1NPgQcoO5oWDS2YekG4Qfd+V+SZyhHzdJ6
+        6JjG0LLc4TaO4Sju4D0W8YpTlt5NcOK687nFUQvtQ984auIiWlmgSjFULZsWt4K660dctb4tLOITqwpS
+        nYeYsGRP/tLxbH2T/rKQuoIufbuQJVz2zT7ZBFqmEOcKuvHtZFQMazZBaIlER0F6QFJ5wQVLrop6UGeA
+        t7IT7FryedRmx3ATlFmibMOv/WWUroJjm/ybEZsg9YlvK7jh20nkVVQIV6YzmHIsl0UPmn9X0Dh2Xf/L
+        kUsuuNALJqWaFlHLFGPwsBN01DC2eSl7oBz5Lx5+2LeAYdHYpqXLhwD9kzIPX4aWxR0hUQjUMXCIqoQY
+        uutTHFzzFBikN50+TfSJok8VHXRS7TbWMfDZUqn8AIENFkKG1oA4AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BtnAyuda.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="BtnAyuda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 9</value>
+  <data name="BtnAyuda.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 487</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 20</value>
+  <data name="BtnAyuda.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 0, 0, 0</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="BtnAyuda.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 50</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>PLATAFORMA - IE CARLOS MORALES</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BtnAyuda.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="BtnAyuda.Text" xml:space="preserve">
+    <value>Ayuda</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;BtnAyuda.Name" xml:space="preserve">
+    <value>BtnAyuda</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>Barra_Control</value>
+  <data name="&gt;&gt;BtnAyuda.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;BtnAyuda.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;BtnAyuda.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="BtnMini.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -247,7 +275,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnMini.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1202, 5</value>
+    <value>1202, 4</value>
   </data>
   <data name="BtnMini.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -271,6 +299,39 @@
     <value>Barra_Control</value>
   </data>
   <data name="&gt;&gt;BtnMini.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.2pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 9</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>PLATAFORMA - IE CARLOS MORALES</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>Barra_Control</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="BtnOcul.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -619,67 +680,6 @@
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <metadata name="BtnAyuda.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="BtnAyuda.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
-  <data name="BtnAyuda.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="BtnAyuda.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="BtnAyuda.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Berlin Sans FB Demi, 10.2pt, style=Bold</value>
-  </data>
-  <data name="BtnAyuda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnCQkVCiv7M9wwAAABm0lEQVRIS62Wy0oDMRSG6zt4pV52
-        LnwE0bUgWlyJ6AtIbfVZ3FnQjUvXVn0J163gFfeCl51K/f7kTLEwk2SqH3yQSU9OpsmZzFRC9Hq9WWzi
-        FXbxw+zgBe7htIWnw6AqtvALY3zjGc7Z8DAEbuA7luUN1y1NPgQcoO5oWDS2YekG4Qfd+V+SZyhHzdJ6
-        6JjG0LLc4TaO4Sju4D0W8YpTlt5NcOK687nFUQvtQ984auIiWlmgSjFULZsWt4K660dctb4tLOITqwpS
-        nYeYsGRP/tLxbH2T/rKQuoIufbuQJVz2zT7ZBFqmEOcKuvHtZFQMazZBaIlER0F6QFJ5wQVLrop6UGeA
-        t7IT7FryedRmx3ATlFmibMOv/WWUroJjm/ybEZsg9YlvK7jh20nkVVQIV6YzmHIsl0UPmn9X0Dh2Xf/L
-        kUsuuNALJqWaFlHLFGPwsBN01DC2eSl7oBz5Lx5+2LeAYdHYpqXLhwD9kzIPX4aWxR0hUQjUMXCIqoQY
-        uutTHFzzFBikN50+TfSJok8VHXRS7TbWMfDZUqn8AIENFkKG1oA4AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="BtnAyuda.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="BtnAyuda.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BtnAyuda.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 487</value>
-  </data>
-  <data name="BtnAyuda.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 0, 0, 0</value>
-  </data>
-  <data name="BtnAyuda.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 50</value>
-  </data>
-  <data name="BtnAyuda.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="BtnAyuda.Text" xml:space="preserve">
-    <value>Ayuda</value>
-  </data>
-  <data name="&gt;&gt;BtnAyuda.Name" xml:space="preserve">
-    <value>BtnAyuda</value>
-  </data>
-  <data name="&gt;&gt;BtnAyuda.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnAyuda.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;BtnAyuda.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="Btn_Soli_Info.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.Button BtnAyuda;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Barra_Control = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.BtnMini = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.BtnOcul = new System.Windows.Forms.PictureBox();
             this.BtnMaxi = new System.Windows.Forms.PictureBox();
             this.BtnCerrar = new System.Windows.Forms.PictureBox();
@@ -61,22 +61,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+            // BtnAyuda
+            // 
+            resources.ApplyResources(BtnAyuda, "BtnAyuda");
+            BtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            BtnAyuda.FlatAppearance.BorderSize = 0;
+            BtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            BtnAyuda.ForeColor = System.Drawing.Color.White;
+            BtnAyuda.Name = "BtnAyuda";
+            BtnAyuda.UseVisualStyleBackColor = false;
+            // 
             // Barra_Control
             // 
             this.Barra_Control.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.Barra_Control.Controls.Add(this.label1);
             this.Barra_Control.Controls.Add(this.BtnMini);
+            this.Barra_Control.Controls.Add(this.label1);
             this.Barra_Control.Controls.Add(this.BtnOcul);
             this.Barra_Control.Controls.Add(this.BtnMaxi);
             this.Barra_Control.Controls.Add(this.BtnCerrar);
             resources.ApplyResources(this.Barra_Control, "Barra_Control");
             this.Barra_Control.Name = "Barra_Control";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
+            this.Barra_Control.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barra_Control_MouseDown);
             // 
             // BtnMini
             // 
@@ -84,6 +89,13 @@
             this.BtnMini.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMini.Name = "BtnMini";
             this.BtnMini.TabStop = false;
+            this.BtnMini.Click += new System.EventHandler(this.BtnMini_Click);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
             // 
             // BtnOcul
             // 
@@ -91,6 +103,7 @@
             this.BtnOcul.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnOcul.Name = "BtnOcul";
             this.BtnOcul.TabStop = false;
+            this.BtnOcul.Click += new System.EventHandler(this.BtnOcul_Click);
             // 
             // BtnMaxi
             // 
@@ -98,6 +111,7 @@
             this.BtnMaxi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMaxi.Name = "BtnMaxi";
             this.BtnMaxi.TabStop = false;
+            this.BtnMaxi.Click += new System.EventHandler(this.BtnMaxi_Click);
             // 
             // BtnCerrar
             // 
@@ -105,6 +119,7 @@
             this.BtnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.TabStop = false;
+            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // panel1
             // 
@@ -128,16 +143,6 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            // 
-            // BtnAyuda
-            // 
-            resources.ApplyResources(BtnAyuda, "BtnAyuda");
-            BtnAyuda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            BtnAyuda.FlatAppearance.BorderSize = 0;
-            BtnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            BtnAyuda.ForeColor = System.Drawing.Color.White;
-            BtnAyuda.Name = "BtnAyuda";
-            BtnAyuda.UseVisualStyleBackColor = false;
             // 
             // Btn_Soli_Info
             // 

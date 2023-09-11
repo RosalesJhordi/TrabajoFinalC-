@@ -1,20 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace TrabajoFinal
 {
     public partial class Form1 : Form
     {
+        private const int WM_SYSCOMMAND = 0x112;
+        private const int SC_MOVE = 0xF012;
+        private const int HTCAPTION = 0x2;
+
+        // Importacion para poder arrastrar la ventana con el mouse
+        [DllImport("user32.dll")]
+        private static extern IntPtr ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnMaxi_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            BtnMaxi.Visible = false;
+            BtnMini.Visible = true;
+        }
+
+        private void BtnMini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            BtnMaxi.Visible = true;
+            BtnMini.Visible = false;
+        }
+
+        private void BtnOcul_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Barra_Control_MouseDown(object sender, MouseEventArgs e)
+        {   
+            BtnMaxi.Visible = true;
+            BtnMini.Visible = false;
+            ReleaseCapture();
+            SendMessage(Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
+            
         }
     }
 }
