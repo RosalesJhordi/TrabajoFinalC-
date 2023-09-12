@@ -54,12 +54,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_IE_CMDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Crud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Crud.Designer.cs">
-      <DependentUpon>Crud.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +96,14 @@
     <Compile Include="FormHijas\Restablecer.Designer.cs">
       <DependentUpon>Restablecer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PanelAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelAdmin.Designer.cs">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Crud.resx">
-      <DependentUpon>Crud.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHijas\Restablecer.resx">
       <DependentUpon>Restablecer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAdmin.resx">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

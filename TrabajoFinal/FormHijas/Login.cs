@@ -60,7 +60,7 @@ namespace TrabajoFinal.FormHijas
 
             if (email == userAdmin && pwd == pwdAdmin)
             {
-                Crud admin = new Crud();
+                PanelAdmin admin = new PanelAdmin();
                 admin.Show();
             }
         }

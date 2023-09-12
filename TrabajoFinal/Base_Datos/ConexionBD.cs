@@ -6,32 +6,20 @@ namespace TrabajoFinal.Base_Datos
 {
     internal class ConexionBD
     {
-        private string servidor = "DESKTOP-2QR1BR7\\SQLEXPRESS";
-        private string bd = "BD_IE_CM";
-        private string usuario = "DESKTOP-2QR1BR7\\Equipo";
-        private SqlConnection conn;
+        private SqlConnection Conn = new SqlConnection("Server= DESKTOP-2QR1BR7\\SQLEXPRESS;DataBase= BD_IE_CM;Integrated Security=true");
 
-        public ConexionBD() 
+        public SqlConnection AbrirConexion()
         {
-            string conect = $"Data Source={servidor};Initial Catalog={bd};Integrated Security=True;User ID={usuario}";
-            conn = new SqlConnection(conect) ;
+            if (Conn.State == ConnectionState.Closed)
+                Conn.Open();
+            return Conn;
         }
 
-        public SqlConnection ObtenerConexion()
+        public SqlConnection CerrarConexion()
         {
-            try
-            {
-                if (conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-                return conn;
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("Fallo en la conexión: " + ex.ToString());
-                return null;
-            }
+            if (Conn.State == ConnectionState.Open)
+                Conn.Close();
+            return Conn;
         }
     }
 }
