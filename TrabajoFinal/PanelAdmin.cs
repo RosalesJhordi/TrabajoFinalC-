@@ -44,6 +44,12 @@ namespace TrabajoFinal
             Opciones.Items.Add("Primaria");
             Opciones.Items.Add("Secundaria");
             Opciones.SelectedIndex = 0;
+
+            OpcionesNivel.Items.Add("Seleciona Nivel (No selecionable)");
+            OpcionesNivel.Items.Add("Inicial");
+            OpcionesNivel.Items.Add("Primaria");
+            OpcionesNivel.Items.Add("Secundaria");
+            OpcionesNivel.SelectedIndex = 0;
         }
 
         private void OFF_Click(object sender, EventArgs e)
@@ -69,14 +75,14 @@ namespace TrabajoFinal
             SendMessage(Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
 
-        //datagrid
+        //datagrid cargar datos
 
         private void CargarDatos()
         {
             try
             {
                 SqlConnection sqlConnection = conexion.AbrirConexion();
-                string consulta = "SELECT Id,Nombres,Apellidos,Direccion,Nivel FROM Estudiante";
+                string consulta = "SELECT Id,Nombres,Apellidos,Direccion,Email,Nivel FROM Estudiante";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(consulta, sqlConnection);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -91,7 +97,7 @@ namespace TrabajoFinal
                 conexion.CerrarConexion();
             }
         }
-
+        //llamar funcion
         private void PanelAdmin_Load(object sender, EventArgs e)
         {
             CargarDatos();
@@ -106,7 +112,7 @@ namespace TrabajoFinal
                 string valorId = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();//obtiene valo
 
                 SqlConnection sqlConnection = conexion.AbrirConexion();
-                string consulta = "DELETE * FROM Estudiantes WHERE Id = @id";
+                string consulta = "DELETE FROM Estudiante WHERE Id = @id";
 
                 using (SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection))
                 {
@@ -116,6 +122,7 @@ namespace TrabajoFinal
                     if (filasEliminadas > 0)
                     {
                         MessageBox.Show("Registro eliminado correctamente.");
+                        CargarDatos(); //recargar los datos
                     }
                     else
                     {
@@ -127,6 +134,46 @@ namespace TrabajoFinal
             {
                 MessageBox.Show("No se ha seleccionado ninguna celda.");
             }
+
+        }
+
+        private void btn_añadir_Click(object sender, EventArgs e)
+        {
+            string nm = input_nm.Text;
+            string ape = input_ape.Text;
+            string tel = input_tel.Text;
+            string dir = input_dir.Text;
+            object nvl = OpcionesNivel.SelectedItem;
+
+            SqlConnection conex = conexion.AbrirConexion();
+            string query = "INSERT INTO Estudiante (Nombres,Apellidos,Telefono,Direccion,Email,Contrasena,Nivel,Perfil)" +
+                " VALUES (@nm,@ape,@tel,@dir,@ema,@pwd,@nvl,0000)";
+
+            using (SqlCommand sqlCommand = new SqlCommand(query,conex))
+            {
+                sqlCommand.Parameters.AddWithValue("@nm", nm);
+                sqlCommand.Parameters.AddWithValue("@ape", ape);
+                sqlCommand.Parameters.AddWithValue("@tel", tel);
+                sqlCommand.Parameters.AddWithValue("@dir", dir);
+                sqlCommand.Parameters.AddWithValue("@ema", nm+"@gmail.com");
+                sqlCommand.Parameters.AddWithValue("@pwd", ape);
+                sqlCommand.Parameters.AddWithValue("@nvl", nvl);
+                int filasEliminadas = sqlCommand.ExecuteNonQuery();// Ejecutar la consulta DELETE
+
+                if (filasEliminadas > 0)
+                {
+                    MessageBox.Show("Añadido exitosamente");
+                    CargarDatos(); //recargar los datos
+                }
+                else
+                {
+                    MessageBox.Show("No se añadio");
+                }
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
 
         }
     }
