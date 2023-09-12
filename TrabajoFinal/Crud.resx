@@ -121,7 +121,7 @@
   <data name="OFF.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1QAADdUBPdZY8QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADMTSURBVHhe7d1p
+        1AAADdQB75G6FQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADMTSURBVHhe7d1p
         sBXVuf/x6zxEM1RSSaWs5M2tSmW6qVupyl8Trl5jEDHGAY0xomgUEcQYxQGcQTSKMQ6oOESDEWMUQcE4
         YRQBByIyHQ7DYfKiAuIAKGJuKrnerP/zHA837fYHnEP33nv16u+LTxU8Z+9ea3Wvfp51zu7d/S8hBAAA
         UDEyCAAA0iaDAAAgbTIIAADSJoMAACBtMggAANImgwAAIG0yCAAA0iaDAAAgbTIIAADSJoMAACBtMggA
@@ -346,7 +346,7 @@
   <data name="ON.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1AAADdQB75G6FQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADRzSURBVHhe7d15
+        0wAADdMBvdUcagAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADRzSURBVHhe7d15
         jB3llffxYV8Ck0SJEkUo+WekKNtEo0hRMkHDJEpeYMKbxHbMZrwAXllsMIttjAFjwJjVGOIAwRgDxuAY
         cLu9L+21vbTd7bW9BBhFmhmNRpowGmWSiZJh8rznXNov5etf291dVfdWPff7x0eC43tvbU+dc/q5dav+
         IoQAAAAajAwCAIC4ySAAAIibDAIAgLjJIAAAiJsMAgCAuMkgAACImwwCAIC4ySAAAIibDAIAgLjJIAAA
@@ -575,5 +575,20 @@
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="estudianteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>299, 17</value>
+  </metadata>
+  <metadata name="bD_IE_CMDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>120, 17</value>
+  </metadata>
+  <metadata name="estudianteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>299, 17</value>
+  </metadata>
+  <metadata name="bD_IE_CMDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>120, 17</value>
+  </metadata>
+  <metadata name="estudianteTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>524, 17</value>
   </metadata>
 </root>

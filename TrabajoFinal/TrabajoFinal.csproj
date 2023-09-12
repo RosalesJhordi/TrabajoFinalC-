@@ -49,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_Datos\ConexionBD.cs" />
+    <Compile Include="BD_IE_CMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_IE_CMDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Crud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +137,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BD_IE_CMDataSet.xsc">
+      <DependentUpon>BD_IE_CMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_IE_CMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_IE_CMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_IE_CMDataSet.xss">
+      <DependentUpon>BD_IE_CMDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

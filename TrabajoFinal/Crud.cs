@@ -32,6 +32,12 @@ namespace TrabajoFinal
                     break;
                 }
             }
+            Opciones.Height = 40;
+            Opciones.Items.Add("Todo");
+            Opciones.Items.Add("Inicial");
+            Opciones.Items.Add("Primaria");
+            Opciones.Items.Add("Secundaria");
+            Opciones.SelectedIndex = 0;
         }
 
         private void ON_Click(object sender, EventArgs e)
@@ -54,6 +60,13 @@ namespace TrabajoFinal
         {
             ReleaseCapture();
             SendMessage(Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
+        }
+
+        private void Crud_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'bD_IE_CMDataSet.Estudiante' Puede moverla o quitarla según sea necesario.
+            this.estudianteTableAdapter.Fill(this.bD_IE_CMDataSet.Estudiante);
+
         }
     }
 }
