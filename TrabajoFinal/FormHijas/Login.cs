@@ -41,16 +41,28 @@ namespace TrabajoFinal.FormHijas
 
         private void Link_OlvidoPwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Crear una instancia del formulario emergente
             Dialogo popup = new Dialogo();
-
-            // Mostrar la ventana emergente como modal
             popup.ShowDialog();
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            string email = input_email.Text;
+            string pwd = input_pwd.Text;
+
+            string userAdmin = "Admin";
+            string pwdAdmin = "Admin";
+
+            if (email == userAdmin && pwd == pwdAdmin)
+            {
+                Crud admin = new Crud();
+                admin.Show();
+            }
         }
     }
 }

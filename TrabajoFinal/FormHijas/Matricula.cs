@@ -38,17 +38,13 @@ namespace TrabajoFinal.FormHijas
         {
             using (openFileDialog)
             {
-                // Establece las propiedades del OpenFileDialog
                 openFileDialog.Title = "Seleccionar una imagen";
                 openFileDialog.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.gif)|*.jpg;*.jpeg;*.png;*.gif";
 
-                // Verifica si el usuario seleccionó un archivo
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Obtén la ruta del archivo seleccionado
-                    string rutaImagen = openFileDialog.FileName;
 
-                    // Puedes cargar y mostrar la imagen en un PictureBox u otro control
+                    string rutaImagen = openFileDialog.FileName;
                     Perfil.Image = Image.FromFile(rutaImagen);
                 }
             }
@@ -88,7 +84,7 @@ namespace TrabajoFinal.FormHijas
             string nvl = Opciones.SelectedItem.ToString();
 
             // Verificar si se ha seleccionado un nivel
-            if (nvl == "Seleciona Nivel (No seleccionable)")
+            if (nvl == "Selecciona Nivel (No seleccionable)")
             {
                 MessageBox.Show("Por favor, seleccione un nivel.");
                 return;
@@ -98,47 +94,61 @@ namespace TrabajoFinal.FormHijas
 
             try
             {
-                // Convertir la imagen en un arreglo de bytes
-                byte[] imagenBytes = null;
+                if (Perfil.Image == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una imagen de perfil.");
+                    return;
+                }
+
+                byte[] imagenBytes;
 
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // Cambia el formato según sea necesario
+                    Perfil.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     imagenBytes = ms.ToArray();
                 }
 
-                conn = new SqlConnection(connectionString); //creamos la conexion a la bd
-                conn.Open();
-                string query = "INSERT INTO Estudiantes (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.Parameters.AddWithValue("@nom", nom);
-                    cmd.Parameters.AddWithValue("@ape", ape);
-                    cmd.Parameters.AddWithValue("@tel", tel);
-                    cmd.Parameters.AddWithValue("@dir", dir);
-                    cmd.Parameters.AddWithValue("@ema", ema);
-                    cmd.Parameters.AddWithValue("@pwd", pwd);
-                    cmd.Parameters.AddWithValue("@nvl", nvl);
-                    cmd.Parameters.Add("@img", SqlDbType.VarBinary).Value = imagenBytes;
-                    
+                    conn.Open();
+                    string query = "INSERT INTO Estudiante (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) " +
+                                   "VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@nom", nom);
+                        cmd.Parameters.AddWithValue("@ape", ape);
+                        cmd.Parameters.AddWithValue("@tel", tel);
+                        cmd.Parameters.AddWithValue("@dir", dir);
+                        cmd.Parameters.AddWithValue("@ema", ema);
+                        cmd.Parameters.AddWithValue("@pwd", pwd);
+                        cmd.Parameters.AddWithValue("@nvl", nvl);
+                        cmd.Parameters.Add("@img", SqlDbType.VarBinary).Value = imagenBytes;
 
-                    // Ejecutamos la consulta
-                    int filasAfect = cmd.ExecuteNonQuery();
-                    if (filasAfect > 0)
-                    {
-                        MessageBox.Show("Matriculado exitosamente");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al matricular. Por favor, inténtelo de nuevo.");
+                        int filasAfect = cmd.ExecuteNonQuery();
+                        if (filasAfect > 0)
+                        {
+                            MessageBox.Show("Matriculado exitosamente");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al matricular. Por favor, inténtelo de nuevo.");
+                        }
                     }
                 }
-                conn.Close();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Error en la base de datos: " + ex.Message);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado: " + ex.Message);
+            }
+
+        }
+
+        private void Matricula_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -492,9 +492,9 @@
             // 
             this.Perfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Perfil.Location = new System.Drawing.Point(815, 479);
+            this.Perfil.Location = new System.Drawing.Point(865, 521);
             this.Perfil.Name = "Perfil";
-            this.Perfil.Size = new System.Drawing.Size(124, 108);
+            this.Perfil.Size = new System.Drawing.Size(61, 53);
             this.Perfil.TabIndex = 27;
             this.Perfil.TabStop = false;
             // 
@@ -527,6 +527,7 @@
             this.Name = "Matricula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Matricula";
+            this.Load += new System.EventHandler(this.Matricula_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -57,7 +57,7 @@ namespace TrabajoFinal.FormHijas
                     for (int i = 0; i < nivelQueries.Count; i++)
                     {
                         string nivel = nivelQueries.ElementAt(i).Key;
-                        string query = "SELECT COUNT(*) FROM Estudiantes WHERE Nivel = @Nivel";
+                        string query = "SELECT COUNT(*) FROM Estudiante WHERE Nivel = @Nivel";
 
                         using (SqlCommand command = new SqlCommand(query, conn))
                         {

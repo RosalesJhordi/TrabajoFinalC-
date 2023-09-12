@@ -14,3 +14,4 @@ C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Restablecer.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Dialogo.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Matricula.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Informacion.resources
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.Crud.resources
