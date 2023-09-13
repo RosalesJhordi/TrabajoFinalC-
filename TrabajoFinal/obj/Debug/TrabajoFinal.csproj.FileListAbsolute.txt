@@ -15,3 +15,4 @@ C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Dialogo.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Matricula.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.Informacion.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.PanelAdmin.resources
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormHijas.DatosInfo.resources

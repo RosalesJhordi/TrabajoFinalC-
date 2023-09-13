@@ -492,9 +492,9 @@
             // 
             this.Perfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Perfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Perfil.Location = new System.Drawing.Point(865, 521);
+            this.Perfil.Location = new System.Drawing.Point(916, 564);
             this.Perfil.Name = "Perfil";
-            this.Perfil.Size = new System.Drawing.Size(61, 53);
+            this.Perfil.Size = new System.Drawing.Size(10, 10);
             this.Perfil.TabIndex = 27;
             this.Perfil.TabStop = false;
             // 

@@ -36,7 +36,7 @@
             this.ON = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Tabla = new System.Windows.Forms.DataGridView();
-            this.InputBuscar = new System.Windows.Forms.TextBox();
+            this.input_buscar = new System.Windows.Forms.TextBox();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.Opciones = new System.Windows.Forms.ComboBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
@@ -61,11 +61,13 @@
             this.btn_selec = new System.Windows.Forms.Button();
             this.Perfil = new System.Windows.Forms.PictureBox();
             this.btn_select = new System.Windows.Forms.Button();
+            this.Filtrar = new System.Windows.Forms.PictureBox();
             this.Barra_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Perfil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Filtrar)).BeginInit();
             this.SuspendLayout();
             // 
             // Barra_Control
@@ -141,13 +143,13 @@
             this.Tabla.Size = new System.Drawing.Size(885, 527);
             this.Tabla.TabIndex = 4;
             // 
-            // InputBuscar
+            // input_buscar
             // 
-            this.InputBuscar.Location = new System.Drawing.Point(8, 82);
-            this.InputBuscar.Multiline = true;
-            this.InputBuscar.Name = "InputBuscar";
-            this.InputBuscar.Size = new System.Drawing.Size(499, 51);
-            this.InputBuscar.TabIndex = 5;
+            this.input_buscar.Location = new System.Drawing.Point(8, 82);
+            this.input_buscar.Multiline = true;
+            this.input_buscar.Name = "input_buscar";
+            this.input_buscar.Size = new System.Drawing.Size(431, 51);
+            this.input_buscar.TabIndex = 5;
             // 
             // btn_buscar
             // 
@@ -155,19 +157,20 @@
             this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
             this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_buscar.Location = new System.Drawing.Point(529, 86);
+            this.btn_buscar.Location = new System.Drawing.Point(458, 86);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(190, 47);
+            this.btn_buscar.Size = new System.Drawing.Size(177, 47);
             this.btn_buscar.TabIndex = 6;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // Opciones
             // 
             this.Opciones.FormattingEnabled = true;
-            this.Opciones.Location = new System.Drawing.Point(744, 109);
+            this.Opciones.Location = new System.Drawing.Point(656, 109);
             this.Opciones.Name = "Opciones";
-            this.Opciones.Size = new System.Drawing.Size(149, 24);
+            this.Opciones.Size = new System.Drawing.Size(170, 24);
             this.Opciones.TabIndex = 7;
             // 
             // btn_eliminar
@@ -320,6 +323,7 @@
             this.btn_verdatos.TabIndex = 23;
             this.btn_verdatos.Text = "Ver Datos";
             this.btn_verdatos.UseVisualStyleBackColor = true;
+            this.btn_verdatos.Click += new System.EventHandler(this.btn_verdatos_Click);
             // 
             // label7
             // 
@@ -406,11 +410,24 @@
             this.btn_select.UseVisualStyleBackColor = true;
             this.btn_select.Click += new System.EventHandler(this.btn_select_Click);
             // 
+            // Filtrar
+            // 
+            this.Filtrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Filtrar.BackgroundImage")));
+            this.Filtrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Filtrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Filtrar.Location = new System.Drawing.Point(832, 91);
+            this.Filtrar.Name = "Filtrar";
+            this.Filtrar.Size = new System.Drawing.Size(61, 42);
+            this.Filtrar.TabIndex = 32;
+            this.Filtrar.TabStop = false;
+            this.Filtrar.Click += new System.EventHandler(this.Filtrar_Click);
+            // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1404, 780);
+            this.Controls.Add(this.Filtrar);
             this.Controls.Add(this.btn_select);
             this.Controls.Add(this.Perfil);
             this.Controls.Add(this.btn_selec);
@@ -435,7 +452,7 @@
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.Opciones);
             this.Controls.Add(this.btn_buscar);
-            this.Controls.Add(this.InputBuscar);
+            this.Controls.Add(this.input_buscar);
             this.Controls.Add(this.Tabla);
             this.Controls.Add(this.Barra_Control);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -448,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Perfil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Filtrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,7 +479,7 @@
         private System.Windows.Forms.PictureBox ON;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridView Tabla;
-        private System.Windows.Forms.TextBox InputBuscar;
+        private System.Windows.Forms.TextBox input_buscar;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.ComboBox Opciones;
         private System.Windows.Forms.Button btn_eliminar;
@@ -486,5 +504,6 @@
         private System.Windows.Forms.Button btn_selec;
         private System.Windows.Forms.PictureBox Perfil;
         private System.Windows.Forms.Button btn_select;
+        private System.Windows.Forms.PictureBox Filtrar;
     }
 }

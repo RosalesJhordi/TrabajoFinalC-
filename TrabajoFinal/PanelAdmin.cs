@@ -6,7 +6,10 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TrabajoFinal.Base_Datos;
+using TrabajoFinal.FormHijas;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Data.Common;
 
 namespace TrabajoFinal
 {
@@ -26,6 +29,8 @@ namespace TrabajoFinal
         ConexionBD conexion = new ConexionBD();
 
         OpenFileDialog openFileDialog = new OpenFileDialog();
+
+        private string Id;
 
         public PanelAdmin()
         {
@@ -237,14 +242,15 @@ namespace TrabajoFinal
             string email = input_ema.Text;
 
             SqlConnection sqlConnection = conexion.AbrirConexion();
-            string consulta = "UPDATE Estudiantes SET Apellidos = @Ap, Direccion = @Dir, Email = @Em WHERE Nombres = @Nomb";
+            string consulta = "UPDATE Estudiantes SET Nombres = @nm,Apellidos = @Ap, Direccion = @Dir, Email = @Em WHERE Id = @Id";
 
             using (SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection))
             {
+                sqlCommand.Parameters.AddWithValue("@nm", nomb);
                 sqlCommand.Parameters.AddWithValue("@Ap", apel);
                 sqlCommand.Parameters.AddWithValue("@Dir", dire);
                 sqlCommand.Parameters.AddWithValue("@Em", email);
-                sqlCommand.Parameters.AddWithValue("@Nomb", nomb); // Parámetro para la condición WHERE
+                sqlCommand.Parameters.AddWithValue("@Id", Id); // Parámetro para la condición WHERE
 
                 int filasActualizadas = sqlCommand.ExecuteNonQuery(); // Ejecutar la consulta UPDATE
 
@@ -269,19 +275,139 @@ namespace TrabajoFinal
                 string ape = Tabla.Rows[rowIndex].Cells["Apellidos"].Value.ToString();
                 string dir = Tabla.Rows[rowIndex].Cells["Direccion"].Value.ToString();
                 string ema = Tabla.Rows[rowIndex].Cells["Email"].Value.ToString();
-                string Id = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();
+                Id = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();
 
 
                 input_nm.Text = nom;
                 input_ape.Text = ape;
                 input_tel.Text = "No se puede cambiar";
+                input_tel.ReadOnly = true;
                 input_dir.Text = dir;
                 input_ema.Text = ema;
                 input_pwd.Text = "No se puede cambiar";
+                input_pwd.ReadOnly = true;
+                OpcionesNivel.Enabled = false;
             }
             else
             {
                 MessageBox.Show("No se ha seleccionado ninguna celda.");
+            }
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string buscado = input_buscar.Text;
+
+            foreach (DataGridViewRow fila in Tabla.Rows)
+            {
+                foreach (DataGridViewCell celda in fila.Cells)
+                {
+                    if (celda.Value != null && celda.Value.ToString().Equals(buscado, StringComparison.OrdinalIgnoreCase))
+                    {
+                        Tabla.CurrentCell = celda;
+                        Tabla.FirstDisplayedScrollingRowIndex = fila.Index;
+                        return;
+                    }
+                }
+            }
+            MessageBox.Show("No encontrado");
+        }
+
+        private void Filtrar_Click(object sender, EventArgs e)
+        {
+            string filt = Opciones.SelectedItem.ToString();
+
+            if (filt == "Todo")
+            {
+                CargarDatos();
+            }
+            else
+            {
+
+                try
+                {
+                    SqlConnection sqlConnection = conexion.AbrirConexion();
+                    string consulta = "SELECT Id, Nombres, Apellidos, Direccion, Email, Nivel FROM Estudiantes WHERE Nivel = @nvl";
+                    using (SqlCommand filtro = new SqlCommand(consulta, sqlConnection))
+                    {
+                        filtro.Parameters.AddWithValue("@nvl", filt);
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(filtro);
+                        DataTable dataTable = new DataTable();
+
+                        dataAdapter.Fill(dataTable);
+
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            Tabla.DataSource = dataTable;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontraron registros con ese nivel");
+                            Tabla.DataSource = null;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.CerrarConexion();
+                }
+            }
+        }
+
+        private void btn_verdatos_Click(object sender, EventArgs e)
+        {
+            if (Tabla.SelectedCells.Count > 0)// Verificar si se seleccio celda
+            {
+                int rowIndex = Tabla.SelectedCells[0].RowIndex;// Obtiene índice de la fila
+                Id = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();
+
+                string nombres = "";
+                string apellidos = "";
+                string telefono = "";
+                string direccion = "";
+                string nivel = "";
+                byte[] perfil = null;
+                ConexionBD cone = new ConexionBD();
+                using (SqlConnection conex = cone.AbrirConexion())
+                {
+                    string query = "SELECT Nombres, Apellidos, Telefono, Direccion, Nivel, Perfil FROM Estudiantes WHERE Id = @id";
+
+                    using (SqlCommand comm = new SqlCommand(query, conex))
+                    {
+                        comm.Parameters.AddWithValue("@id", Id);
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                nombres = reader["Nombres"].ToString();
+                                apellidos = reader["Apellidos"].ToString();
+                                telefono = reader["Telefono"].ToString();
+                                direccion = reader["Direccion"].ToString();
+                                nivel = reader["Nivel"].ToString();
+                                perfil = (byte[])reader["Perfil"];
+                            }
+                        }
+                    }
+                }
+                System.Drawing.Image perfilImagen = null;
+
+                if (perfil != null && perfil.Length > 0)
+                {
+                    // Convierte los bytes
+                    System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
+                    perfilImagen = (System.Drawing.Image)converter.ConvertFrom(perfil);
+                }
+                DatosInfo info = new DatosInfo(nombres, apellidos, telefono, direccion, nivel, perfilImagen);
+                info.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna estudiante");
             }
         }
     }

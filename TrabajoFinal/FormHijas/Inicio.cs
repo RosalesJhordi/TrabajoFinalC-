@@ -45,16 +45,16 @@ namespace TrabajoFinal.FormHijas
 
                 using (SqlCommand command = new SqlCommand(query, sqlConnection))
                 {
-                      command.Parameters.AddWithValue("@Nivel", nivelQueries.ElementAt(i).Value);
-                      int count = (int)command.ExecuteScalar();
+                    command.Parameters.AddWithValue("@Nivel", nivelQueries.ElementAt(i).Value);
+                    int count = (int)command.ExecuteScalar();
 
-                      DataPoint dataPoint = new DataPoint();
-                      dataPoint.SetValueY(count);
-                      dataPoint.IsValueShownAsLabel = true;
-                      dataPoint.Label = nivel; // Mostrar solo el nivel en la leyenda
-                      dataPoint.Color = colors[i]; // Asignar un color específico
-
-                      series2.Points.Add(dataPoint);
+                    DataPoint dataPoint = new DataPoint();
+                    dataPoint.SetValueY(count);
+                    dataPoint.IsValueShownAsLabel = true;
+                    dataPoint.Label = nivel; // Mostrar solo el nivel en la leyenda
+                    dataPoint.Color = colors[i]; // Asignar un color específico
+                    dataPoint.LabelForeColor = Color.White;
+                    series2.Points.Add(dataPoint);
                 }
             }
 
