@@ -2,9 +2,11 @@
 using System.Data.SqlClient;
 using System.Data;
 using System.Reflection.Emit;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TrabajoFinal.Base_Datos;
+using System.IO;
 
 namespace TrabajoFinal
 {
@@ -22,6 +24,8 @@ namespace TrabajoFinal
 
         //conexion 
         ConexionBD conexion = new ConexionBD();
+
+        OpenFileDialog openFileDialog = new OpenFileDialog();
 
         public PanelAdmin()
         {
@@ -143,22 +147,49 @@ namespace TrabajoFinal
             string ape = input_ape.Text;
             string tel = input_tel.Text;
             string dir = input_dir.Text;
-            object nvl = OpcionesNivel.SelectedItem;
+            string ema = input_ema.Text;
+            string pwd = input_pwd.Text;
+            string nvl = OpcionesNivel.SelectedItem.ToString();
 
-            SqlConnection conex = conexion.AbrirConexion();
-            string query = "INSERT INTO Estudiante (Nombres,Apellidos,Telefono,Direccion,Email,Contrasena,Nivel,Perfil)" +
-                " VALUES (@nm,@ape,@tel,@dir,@ema,@pwd,@nvl,0000)";
-
-            using (SqlCommand sqlCommand = new SqlCommand(query,conex))
+            // Verificar si se ha seleccionado un nivel
+            if (nvl == "Selecciona Nivel (No seleccionable)")
             {
-                sqlCommand.Parameters.AddWithValue("@nm", nm);
-                sqlCommand.Parameters.AddWithValue("@ape", ape);
-                sqlCommand.Parameters.AddWithValue("@tel", tel);
-                sqlCommand.Parameters.AddWithValue("@dir", dir);
-                sqlCommand.Parameters.AddWithValue("@ema", nm+"@gmail.com");
-                sqlCommand.Parameters.AddWithValue("@pwd", ape);
-                sqlCommand.Parameters.AddWithValue("@nvl", nvl);
-                int filasEliminadas = sqlCommand.ExecuteNonQuery();// Ejecutar la consulta DELETE
+                MessageBox.Show("Por favor, seleccione un nivel.");
+                return;
+            }
+
+            Image img = Perfil.Image;
+
+            try
+            {
+                if (Perfil.Image == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una imagen de perfil.");
+                    return;
+                }
+
+                byte[] imagenBytes;
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    Perfil.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    imagenBytes = ms.ToArray();
+                }
+
+                SqlConnection conex = conexion.AbrirConexion();
+                string query = "INSERT INTO Estudiante (Nombres,Apellidos,Telefono,Direccion,Email,Contrasena,Nivel,Perfil) VALUES (@nm,@ape,@tel,@dir,@ema,@pwd,@nvl,@perfil)";
+
+                using (SqlCommand comm = new SqlCommand(query,conex))
+                {
+                    comm.Parameters.AddWithValue("@nm", nm);
+                    comm.Parameters.AddWithValue("@ape", ape);
+                    comm.Parameters.AddWithValue("@tel", tel);
+                    comm.Parameters.AddWithValue("@dir", dir);
+                    comm.Parameters.AddWithValue("@ema", ema);
+                    comm.Parameters.AddWithValue("@pwd", pwd);
+                    comm.Parameters.AddWithValue("@nvl", nvl);
+                    comm.Parameters.Add("@perfil", SqlDbType.VarBinary).Value = imagenBytes;
+                    int filasEliminadas = comm.ExecuteNonQuery();// Ejecutar la consulta DELETE
 
                 if (filasEliminadas > 0)
                 {
@@ -170,11 +201,32 @@ namespace TrabajoFinal
                     MessageBox.Show("No se añadio");
                 }
             }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error en la base de datos: " + ex.Message);
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_selec_Click(object sender, EventArgs e)
+        {
+            using (openFileDialog)
+            {
+                openFileDialog.Title = "Seleccionar una imagen";
+                openFileDialog.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png;*.gif)|*.jpg;*.jpeg;*.png;*.gif";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+
+                    string rutaImagen = openFileDialog.FileName;
+                    Perfil.Image = Image.FromFile(rutaImagen);
+                }
+            }
         }
     }
 }

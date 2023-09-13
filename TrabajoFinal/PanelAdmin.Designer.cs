@@ -54,15 +54,17 @@
             this.OpcionesNivel = new System.Windows.Forms.ComboBox();
             this.btn_verdatos = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.input_ema = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.input_pwd = new System.Windows.Forms.TextBox();
+            this.btn_selec = new System.Windows.Forms.Button();
+            this.Perfil = new System.Windows.Forms.PictureBox();
             this.Barra_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ON)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Perfil)).BeginInit();
             this.SuspendLayout();
             // 
             // Barra_Control
@@ -328,13 +330,13 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Email";
             // 
-            // textBox1
+            // input_ema
             // 
-            this.textBox1.Location = new System.Drawing.Point(986, 410);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(360, 35);
-            this.textBox1.TabIndex = 25;
+            this.input_ema.Location = new System.Drawing.Point(986, 410);
+            this.input_ema.Multiline = true;
+            this.input_ema.Name = "input_ema";
+            this.input_ema.Size = new System.Drawing.Size(360, 35);
+            this.input_ema.TabIndex = 25;
             // 
             // label8
             // 
@@ -358,37 +360,47 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Perfil";
             // 
-            // textBox2
+            // input_pwd
             // 
-            this.textBox2.Location = new System.Drawing.Point(986, 493);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(360, 35);
-            this.textBox2.TabIndex = 28;
+            this.input_pwd.Location = new System.Drawing.Point(986, 493);
+            this.input_pwd.Multiline = true;
+            this.input_pwd.Name = "input_pwd";
+            this.input_pwd.Size = new System.Drawing.Size(360, 35);
+            this.input_pwd.TabIndex = 28;
             // 
-            // button1
+            // btn_selec
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(986, 656);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(360, 35);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Selecionar imagen";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_selec.BackColor = System.Drawing.Color.White;
+            this.btn_selec.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_selec.FlatAppearance.BorderSize = 0;
+            this.btn_selec.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_selec.Location = new System.Drawing.Point(986, 656);
+            this.btn_selec.Name = "btn_selec";
+            this.btn_selec.Size = new System.Drawing.Size(360, 35);
+            this.btn_selec.TabIndex = 29;
+            this.btn_selec.Text = "Selecionar imagen";
+            this.btn_selec.UseVisualStyleBackColor = false;
+            this.btn_selec.Click += new System.EventHandler(this.btn_selec_Click);
+            // 
+            // Perfil
+            // 
+            this.Perfil.Location = new System.Drawing.Point(1367, 603);
+            this.Perfil.Name = "Perfil";
+            this.Perfil.Size = new System.Drawing.Size(10, 10);
+            this.Perfil.TabIndex = 30;
+            this.Perfil.TabStop = false;
             // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1404, 780);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Perfil);
+            this.Controls.Add(this.btn_selec);
+            this.Controls.Add(this.input_pwd);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.input_ema);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_verdatos);
             this.Controls.Add(this.OpcionesNivel);
@@ -418,6 +430,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.OFF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ON)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Perfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,10 +462,11 @@
         private System.Windows.Forms.ComboBox OpcionesNivel;
         private System.Windows.Forms.Button btn_verdatos;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox input_ema;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox input_pwd;
+        private System.Windows.Forms.Button btn_selec;
+        private System.Windows.Forms.PictureBox Perfil;
     }
 }
