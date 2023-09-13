@@ -86,7 +86,7 @@ namespace TrabajoFinal
             try
             {
                 SqlConnection sqlConnection = conexion.AbrirConexion();
-                string consulta = "SELECT Id,Nombres,Apellidos,Direccion,Email,Nivel FROM Estudiante";
+                string consulta = "SELECT Id,Nombres,Apellidos,Direccion,Email,Nivel FROM Estudiantes";
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(consulta, sqlConnection);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
@@ -116,7 +116,7 @@ namespace TrabajoFinal
                 string valorId = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();//obtiene valo
 
                 SqlConnection sqlConnection = conexion.AbrirConexion();
-                string consulta = "DELETE FROM Estudiante WHERE Id = @id";
+                string consulta = "DELETE FROM Estudiantes WHERE Id = @id";
 
                 using (SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection))
                 {
@@ -177,7 +177,7 @@ namespace TrabajoFinal
                 }
 
                 SqlConnection conex = conexion.AbrirConexion();
-                string query = "INSERT INTO Estudiante (Nombres,Apellidos,Telefono,Direccion,Email,Contrasena,Nivel,Perfil) VALUES (@nm,@ape,@tel,@dir,@ema,@pwd,@nvl,@perfil)";
+                string query = "INSERT INTO Estudiantes (Nombres,Apellidos,Telefono,Direccion,Email,Contrasena,Nivel,Perfil) VALUES (@nm,@ape,@tel,@dir,@ema,@pwd,@nvl,@perfil)";
 
                 using (SqlCommand comm = new SqlCommand(query,conex))
                 {
@@ -226,6 +226,62 @@ namespace TrabajoFinal
                     string rutaImagen = openFileDialog.FileName;
                     Perfil.Image = Image.FromFile(rutaImagen);
                 }
+            }
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            string nomb = input_nm.Text;
+            string apel = input_ape.Text;
+            string dire = input_dir.Text;
+            string email = input_ema.Text;
+
+            SqlConnection sqlConnection = conexion.AbrirConexion();
+            string consulta = "UPDATE Estudiantes SET Apellidos = @Ap, Direccion = @Dir, Email = @Em WHERE Nombres = @Nomb";
+
+            using (SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection))
+            {
+                sqlCommand.Parameters.AddWithValue("@Ap", apel);
+                sqlCommand.Parameters.AddWithValue("@Dir", dire);
+                sqlCommand.Parameters.AddWithValue("@Em", email);
+                sqlCommand.Parameters.AddWithValue("@Nomb", nomb); // Parámetro para la condición WHERE
+
+                int filasActualizadas = sqlCommand.ExecuteNonQuery(); // Ejecutar la consulta UPDATE
+
+                if (filasActualizadas > 0)
+                {
+                    MessageBox.Show("Registro actualizado correctamente.");
+                    CargarDatos(); // Recargar los datos si es necesario
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró ningún registro con ese nombre.");
+                }
+            }
+        }
+
+        private void btn_select_Click(object sender, EventArgs e)
+        {
+            if (Tabla.SelectedCells.Count > 0)// Verificar si se seleccio celda
+            {
+                int rowIndex = Tabla.SelectedCells[0].RowIndex;// Obtiene índice de la fila
+                string nom = Tabla.Rows[rowIndex].Cells["Nombres"].Value.ToString();//obtiene valor
+                string ape = Tabla.Rows[rowIndex].Cells["Apellidos"].Value.ToString();
+                string dir = Tabla.Rows[rowIndex].Cells["Direccion"].Value.ToString();
+                string ema = Tabla.Rows[rowIndex].Cells["Email"].Value.ToString();
+                string Id = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();
+
+
+                input_nm.Text = nom;
+                input_ape.Text = ape;
+                input_tel.Text = "No se puede cambiar";
+                input_dir.Text = dir;
+                input_ema.Text = ema;
+                input_pwd.Text = "No se puede cambiar";
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna celda.");
             }
         }
     }

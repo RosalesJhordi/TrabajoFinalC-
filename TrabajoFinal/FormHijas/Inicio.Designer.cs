@@ -32,13 +32,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel2 = new System.Windows.Forms.Panel();
             this.Cantidad = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Prestigio = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -54,7 +50,6 @@
             this.HoraFechs = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Prestigio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -65,7 +60,6 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.Cantidad);
-            this.panel2.Controls.Add(this.Prestigio);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -92,30 +86,6 @@
             this.Cantidad.Size = new System.Drawing.Size(316, 247);
             this.Cantidad.TabIndex = 10;
             this.Cantidad.Text = "chart1";
-            // 
-            // Prestigio
-            // 
-            this.Prestigio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            chartArea2.Name = "ChartArea1";
-            this.Prestigio.ChartAreas.Add(chartArea2);
-            this.Prestigio.Cursor = System.Windows.Forms.Cursors.Hand;
-            legend2.Alignment = System.Drawing.StringAlignment.Center;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend2.Name = "Legend1";
-            this.Prestigio.Legends.Add(legend2);
-            this.Prestigio.Location = new System.Drawing.Point(298, 0);
-            this.Prestigio.Name = "Prestigio";
-            this.Prestigio.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Radar;
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.Prestigio.Series.Add(series2);
-            this.Prestigio.Size = new System.Drawing.Size(325, 279);
-            this.Prestigio.TabIndex = 9;
-            this.Prestigio.TabStop = false;
-            this.Prestigio.Text = "chart1";
             // 
             // pictureBox4
             // 
@@ -298,7 +268,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Prestigio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -323,7 +292,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataVisualization.Charting.Chart Cantidad;
-        private System.Windows.Forms.DataVisualization.Charting.Chart Prestigio;
         private System.Windows.Forms.Timer HoraFechs;
     }
 }

@@ -60,6 +60,7 @@
             this.input_pwd = new System.Windows.Forms.TextBox();
             this.btn_selec = new System.Windows.Forms.Button();
             this.Perfil = new System.Windows.Forms.PictureBox();
+            this.btn_select = new System.Windows.Forms.Button();
             this.Barra_Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OFF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ON)).BeginInit();
@@ -209,6 +210,7 @@
             this.btn_actualizar.TabIndex = 11;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // input_nm
             // 
@@ -390,11 +392,26 @@
             this.Perfil.TabIndex = 30;
             this.Perfil.TabStop = false;
             // 
+            // btn_select
+            // 
+            this.btn_select.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_select.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_select.Image = ((System.Drawing.Image)(resources.GetObject("btn_select.Image")));
+            this.btn_select.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_select.Location = new System.Drawing.Point(445, 721);
+            this.btn_select.Name = "btn_select";
+            this.btn_select.Size = new System.Drawing.Size(190, 47);
+            this.btn_select.TabIndex = 31;
+            this.btn_select.Text = "Selecionar";
+            this.btn_select.UseVisualStyleBackColor = true;
+            this.btn_select.Click += new System.EventHandler(this.btn_select_Click);
+            // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1404, 780);
+            this.Controls.Add(this.btn_select);
             this.Controls.Add(this.Perfil);
             this.Controls.Add(this.btn_selec);
             this.Controls.Add(this.input_pwd);
@@ -468,5 +485,6 @@
         private System.Windows.Forms.TextBox input_pwd;
         private System.Windows.Forms.Button btn_selec;
         private System.Windows.Forms.PictureBox Perfil;
+        private System.Windows.Forms.Button btn_select;
     }
 }

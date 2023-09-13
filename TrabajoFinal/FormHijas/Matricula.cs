@@ -12,8 +12,8 @@ namespace TrabajoFinal.FormHijas
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
 
-        private string connectionString = "Data Source=DESKTOP-2QR1BR7\\SQLEXPRESS;Initial Catalog=BD_IE_CM;Integrated Security=True;User ID=DESKTOP-2QR1BR7\\Equipo";
-        private SqlConnection conn;
+        //conexion 
+        ConexionBD conexion = new ConexionBD();
 
         public Matricula()
         {
@@ -107,14 +107,10 @@ namespace TrabajoFinal.FormHijas
                     Perfil.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     imagenBytes = ms.ToArray();
                 }
-
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                SqlConnection sqlConnection = conexion.AbrirConexion();
+                string query = "INSERT INTO Estudiantes (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
+                using (SqlCommand cmd = new SqlCommand(query, sqlConnection))
                 {
-                    conn.Open();
-                    string query = "INSERT INTO Estudiante (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) " +
-                                   "VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
                         cmd.Parameters.AddWithValue("@nom", nom);
                         cmd.Parameters.AddWithValue("@ape", ape);
                         cmd.Parameters.AddWithValue("@tel", tel);
@@ -133,7 +129,6 @@ namespace TrabajoFinal.FormHijas
                         {
                             MessageBox.Show("Error al matricular. Por favor, inténtelo de nuevo.");
                         }
-                    }
                 }
             }
             catch (SqlException ex)
@@ -144,9 +139,7 @@ namespace TrabajoFinal.FormHijas
             {
                 MessageBox.Show("Error inesperado: " + ex.Message);
             }
-
         }
-
         private void Matricula_Load(object sender, EventArgs e)
         {
 
