@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TrabajoFinal.FormHijas;
+using TrabajoFinal.Base_Datos;
 
 namespace TrabajoFinal
 {
@@ -17,6 +18,7 @@ namespace TrabajoFinal
 
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
 
         public Form1()
         {

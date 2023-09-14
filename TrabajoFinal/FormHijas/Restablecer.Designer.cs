@@ -49,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.Parar = new System.Windows.Forms.PictureBox();
             this.ReLoad2 = new System.Windows.Forms.PictureBox();
             this.ReLoad1 = new System.Windows.Forms.PictureBox();
             this.Sonido = new System.Windows.Forms.PictureBox();
@@ -70,6 +71,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Parar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReLoad2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReLoad1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sonido)).BeginInit();
@@ -292,6 +294,7 @@
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel5.Controls.Add(this.Parar);
             this.panel5.Controls.Add(this.ReLoad2);
             this.panel5.Controls.Add(this.ReLoad1);
             this.panel5.Controls.Add(this.Sonido);
@@ -302,12 +305,24 @@
             this.panel5.Size = new System.Drawing.Size(384, 246);
             this.panel5.TabIndex = 15;
             // 
+            // Parar
+            // 
+            this.Parar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Parar.BackgroundImage")));
+            this.Parar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Parar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Parar.Location = new System.Drawing.Point(159, 185);
+            this.Parar.Name = "Parar";
+            this.Parar.Size = new System.Drawing.Size(55, 43);
+            this.Parar.TabIndex = 21;
+            this.Parar.TabStop = false;
+            this.Parar.Click += new System.EventHandler(this.Parar_Click);
+            // 
             // ReLoad2
             // 
             this.ReLoad2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReLoad2.BackgroundImage")));
             this.ReLoad2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ReLoad2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReLoad2.Location = new System.Drawing.Point(195, 186);
+            this.ReLoad2.Location = new System.Drawing.Point(243, 186);
             this.ReLoad2.Name = "ReLoad2";
             this.ReLoad2.Size = new System.Drawing.Size(55, 43);
             this.ReLoad2.TabIndex = 20;
@@ -320,7 +335,7 @@
             this.ReLoad1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReLoad1.BackgroundImage")));
             this.ReLoad1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ReLoad1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReLoad1.Location = new System.Drawing.Point(195, 186);
+            this.ReLoad1.Location = new System.Drawing.Point(243, 185);
             this.ReLoad1.Name = "ReLoad1";
             this.ReLoad1.Size = new System.Drawing.Size(55, 43);
             this.ReLoad1.TabIndex = 19;
@@ -332,7 +347,7 @@
             this.Sonido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sonido.BackgroundImage")));
             this.Sonido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Sonido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Sonido.Location = new System.Drawing.Point(107, 186);
+            this.Sonido.Location = new System.Drawing.Point(74, 185);
             this.Sonido.Name = "Sonido";
             this.Sonido.Size = new System.Drawing.Size(55, 43);
             this.Sonido.TabIndex = 17;
@@ -460,6 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Parar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReLoad2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReLoad1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sonido)).EndInit();
@@ -503,5 +519,6 @@
         private System.Windows.Forms.TextBox input_captcha;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button Btn_camb;
+        private System.Windows.Forms.PictureBox Parar;
     }
 }

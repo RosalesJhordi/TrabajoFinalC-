@@ -22,9 +22,9 @@ namespace TrabajoFinal.FormHijas
             // ComboBox
             Opciones.Height = 40;
             Opciones.Items.Add("Seleciona Nivel (No seleccionable)");
-            Opciones.Items.Add("INICIAL");
-            Opciones.Items.Add("PRIMARIA");
-            Opciones.Items.Add("SECUNDARIA");
+            Opciones.Items.Add("Inicial");
+            Opciones.Items.Add("Primaria");
+            Opciones.Items.Add("Secundaria");
 
             Opciones.SelectedIndex = 0;
         }
@@ -83,6 +83,8 @@ namespace TrabajoFinal.FormHijas
             string pwd = input_pwd.Text;
             string nvl = Opciones.SelectedItem.ToString();
 
+            string pwdhash = Seguridad.Encriptar(pwd);
+
             // Verificar si se ha seleccionado un nivel
             if (nvl == "Selecciona Nivel (No seleccionable)")
             {
@@ -116,7 +118,7 @@ namespace TrabajoFinal.FormHijas
                         cmd.Parameters.AddWithValue("@tel", tel);
                         cmd.Parameters.AddWithValue("@dir", dir);
                         cmd.Parameters.AddWithValue("@ema", ema);
-                        cmd.Parameters.AddWithValue("@pwd", pwd);
+                        cmd.Parameters.AddWithValue("@pwd", pwdhash);
                         cmd.Parameters.AddWithValue("@nvl", nvl);
                         cmd.Parameters.Add("@img", SqlDbType.VarBinary).Value = imagenBytes;
 

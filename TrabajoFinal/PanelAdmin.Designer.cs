@@ -145,11 +145,14 @@
             // 
             // input_buscar
             // 
+            this.input_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_buscar.Location = new System.Drawing.Point(8, 82);
             this.input_buscar.Multiline = true;
             this.input_buscar.Name = "input_buscar";
             this.input_buscar.Size = new System.Drawing.Size(431, 51);
             this.input_buscar.TabIndex = 5;
+            this.input_buscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_buscar.UseWaitCursor = true;
             // 
             // btn_buscar
             // 
@@ -217,6 +220,7 @@
             // 
             // input_nm
             // 
+            this.input_nm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_nm.Location = new System.Drawing.Point(986, 94);
             this.input_nm.Multiline = true;
             this.input_nm.Name = "input_nm";
@@ -225,6 +229,7 @@
             // 
             // input_ape
             // 
+            this.input_ape.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_ape.Location = new System.Drawing.Point(986, 164);
             this.input_ape.Multiline = true;
             this.input_ape.Name = "input_ape";
@@ -233,6 +238,7 @@
             // 
             // input_tel
             // 
+            this.input_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_tel.Location = new System.Drawing.Point(986, 237);
             this.input_tel.Multiline = true;
             this.input_tel.Name = "input_tel";
@@ -241,6 +247,7 @@
             // 
             // input_dir
             // 
+            this.input_dir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.input_dir.Location = new System.Drawing.Point(986, 325);
             this.input_dir.Multiline = true;
             this.input_dir.Name = "input_dir";
@@ -338,6 +345,7 @@
             // 
             // input_ema
             // 
+            this.input_ema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.input_ema.Location = new System.Drawing.Point(986, 410);
             this.input_ema.Multiline = true;
             this.input_ema.Name = "input_ema";
@@ -368,6 +376,7 @@
             // 
             // input_pwd
             // 
+            this.input_pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.input_pwd.Location = new System.Drawing.Point(986, 493);
             this.input_pwd.Multiline = true;
             this.input_pwd.Name = "input_pwd";

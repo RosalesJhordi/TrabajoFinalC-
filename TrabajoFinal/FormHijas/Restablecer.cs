@@ -3,6 +3,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TrabajoFinal.Base_Datos;
+using System.Data.SqlClient;
 
 namespace TrabajoFinal.FormHijas
 {
@@ -33,15 +35,14 @@ namespace TrabajoFinal.FormHijas
 
             if (!string.IsNullOrEmpty(texto))
             {
-                // Deletrear cada letra individualmente
                 foreach (char letra in texto)
                 {
                     string letraTexto = letra.ToString();
-                    synth.Speak(letraTexto); // Convertir y reproducir cada letra
-                    Application.DoEvents(); // Permitir la actualización de la interfaz de usuario
-                    System.Threading.Thread.Sleep(200); // Esperar un tiempo entre letras (ajusta según tus preferencias)
+                    synth.SpeakAsync(letraTexto);
+                    System.Threading.Thread.Sleep(100);
                 }
             }
+
         }
 
         private void Ver_Click(object sender, EventArgs e)
@@ -114,15 +115,57 @@ namespace TrabajoFinal.FormHijas
         {
             string capt = Captcha.Text;
             string valor = input_captcha.Text;
+            string ape = input_ape.Text;
+            string email = input_email.Text;
+            string pwdd1 = input_pwd1.Text;
+            string pwdd2 = input_pwd2.Text;
+
+            string pwdhash = Seguridad.Encriptar(pwdd1);
+            Console.WriteLine("Cadena Encriptada: " + pwdhash);
 
             if (valor == capt)
-            {
-                MessageBox.Show("Son iguales");
+            {   
+                if(pwdd1 == pwdd2)
+                {
+                    ConexionBD cone = new ConexionBD();
+                    using (SqlConnection conex = cone.AbrirConexion())
+                    {
+                        string query = "UPDATE Estudiantes SET Contrasena = @pwd WHERE Email = @ema AND Apellidos = @ape";
+
+                        using (SqlCommand comm = new SqlCommand(query, conex))
+                        {
+                            comm.Parameters.AddWithValue("@pwd", pwdhash);
+                            comm.Parameters.AddWithValue("@ema", email);
+                            comm.Parameters.AddWithValue("@ape", ape);
+
+                            int filasActualizadas = comm.ExecuteNonQuery();
+
+                            if (filasActualizadas > 0)
+                            {
+                               MessageBox.Show("Contraseña actualizada correctamente");
+                            }
+                            else
+                            {
+                               MessageBox.Show("No se encontró ningún registro con ese nombre");
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
             }
             else
             {
-                MessageBox.Show("falla");
+                MessageBox.Show("error en el captcha");
+                GenerarNuevoCaptcha();
             }
+        }
+
+        private void Parar_Click(object sender, EventArgs e)
+        {
+            synth.SpeakAsyncCancelAll();
         }
     }
 }

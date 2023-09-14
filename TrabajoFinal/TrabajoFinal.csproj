@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base_Datos\ConexionBD.cs" />
+    <Compile Include="Base_Datos\Seguridad.cs" />
     <Compile Include="BD_IE_CMDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

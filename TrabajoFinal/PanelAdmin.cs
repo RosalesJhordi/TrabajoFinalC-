@@ -10,6 +10,7 @@ using TrabajoFinal.FormHijas;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Data.Common;
+using System.Security.Cryptography;
 
 namespace TrabajoFinal
 {
@@ -156,6 +157,10 @@ namespace TrabajoFinal
             string pwd = input_pwd.Text;
             string nvl = OpcionesNivel.SelectedItem.ToString();
 
+            string pwdhash = Seguridad.Encriptar(pwd);
+            Console.WriteLine("Cadena Encriptada: " + pwdhash);
+
+
             // Verificar si se ha seleccionado un nivel
             if (nvl == "Selecciona Nivel (No seleccionable)")
             {
@@ -191,7 +196,7 @@ namespace TrabajoFinal
                     comm.Parameters.AddWithValue("@tel", tel);
                     comm.Parameters.AddWithValue("@dir", dir);
                     comm.Parameters.AddWithValue("@ema", ema);
-                    comm.Parameters.AddWithValue("@pwd", pwd);
+                    comm.Parameters.AddWithValue("@pwd", pwdhash);
                     comm.Parameters.AddWithValue("@nvl", nvl);
                     comm.Parameters.Add("@perfil", SqlDbType.VarBinary).Value = imagenBytes;
                     int filasEliminadas = comm.ExecuteNonQuery();// Ejecutar la consulta DELETE
@@ -372,6 +377,7 @@ namespace TrabajoFinal
                 string direccion = "";
                 string nivel = "";
                 byte[] perfil = null;
+
                 ConexionBD cone = new ConexionBD();
                 using (SqlConnection conex = cone.AbrirConexion())
                 {
