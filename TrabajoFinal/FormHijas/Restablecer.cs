@@ -2,7 +2,6 @@
 using System.Text;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TrabajoFinal.Base_Datos;
 using System.Data.SqlClient;
 

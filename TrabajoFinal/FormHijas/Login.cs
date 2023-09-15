@@ -54,7 +54,6 @@ namespace TrabajoFinal.FormHijas
         {
 
         }
-
         private void btn_login_Click(object sender, EventArgs e)
         {
             string email = input_email.Text;
