@@ -23,20 +23,20 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid13.0"
+          "monoandroid10.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid13.0": {
+          "monoandroid10.0": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "monoandroid13.0": {
+        "monoandroid10.0": {
           "dependencies": {
             "Xamarin.AndroidX.AppCompat": {
               "target": "Package",
