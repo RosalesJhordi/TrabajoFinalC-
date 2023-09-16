@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BindingContext="{Binding LoginViewModel}">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,0,0" VerticalOptions="StartAndExpand">
+            <?iamegn de principio ?>
+            <Grid>
+                <BoxView Color="Blue" WidthRequest="200" HeightRequest="200" />
+                <Image Source="xamarin_logo.png" Aspect="AspectFit" WidthRequest="150" HeightRequest="150" />
+            </Grid>
+            <Label Text="LOGIN" TextColor="Black" HorizontalTextAlignment="Center" FontSize="24" Margin="0,50,0,30"/>
+            <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10">
+                <Entry Placeholder="Email" PlaceholderColor="Gray" Text="{Binding Username}" TextColor="Black" />
+            </Frame>
+            <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10" Margin="0,25,0,0">
+                <Entry Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" Text="{Binding Password}" TextColor="Black"/>
+            </Frame>
+            <Label Text="Olvidaste tu contraseña ?" TextColor="Black" HorizontalTextAlignment="End" FontSize="15" Margin="0,20,0,0"/>
+            <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" HorizontalOptions="Center" Margin="0,40" WidthRequest="250" HeightRequest="40"/>
+
+            <Label Text="v1.01" TextColor="Black" VerticalTextAlignment="Start" Margin="5,120,0,0"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
