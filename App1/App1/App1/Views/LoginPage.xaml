@@ -16,16 +16,25 @@
                 <Image Source="xamarin_logo.png" Aspect="AspectFit" WidthRequest="150" HeightRequest="150" />
             </Grid>
             <Label Text="LOGIN" TextColor="Black" HorizontalTextAlignment="Center" FontSize="24" Margin="0,50,0,30"/>
-            <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10">
-                <Entry Placeholder="Email" PlaceholderColor="Gray" Text="{Binding Username}" TextColor="Black" />
+            <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10" Margin="10,0,10,0">
+                <Entry Placeholder="Email" PlaceholderColor="Gray" TextColor="Black" />
             </Frame>
-            <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10" Margin="0,25,0,0">
-                <Entry Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="True" Text="{Binding Password}" TextColor="Black"/>
+            <Label Text="Olvidaste tu contraseña ?" TextColor="Black" HorizontalTextAlignment="End" FontSize="15" Margin="0,20,5,0" />
+            <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10" Margin="10,0,10,0">
+                <Entry Placeholder="Contraseña" PlaceholderColor="Gray" IsPassword="{Binding IsPwdVisible}" TextColor="Black" WidthRequest="100">
+                    <Entry.Triggers>
+                        <DataTrigger TargetType="Entry" Binding="{Binding IsPwdVisible}" Value="True">
+                            <Setter Property="IsPassword" Value="False" />
+                        </DataTrigger>
+                    </Entry.Triggers>
+                </Entry>
             </Frame>
-            <Label Text="Olvidaste tu contraseña ?" TextColor="Black" HorizontalTextAlignment="End" FontSize="15" Margin="0,20,0,0"/>
+            <CheckBox x:Name="myCheckBox"  Margin="5,10,0,0" IsChecked="{Binding IsPwdVisible}" Color="SkyBlue"/>
+            <Label Text="Mostrar contraseña" VerticalOptions="CenterAndExpand" TextColor="Black" Margin="35,-30,0,0"/>
             <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" HorizontalOptions="Center" Margin="0,40" WidthRequest="250" HeightRequest="40"/>
 
-            <Label Text="v1.01" TextColor="Black" VerticalTextAlignment="Start" Margin="5,120,0,0"/>
+            <Label Text="v1.01" TextColor="Black" VerticalTextAlignment="Start" Margin="10,150,0,0" FontSize="15" FontFamily="Bold"/>
+
 
         </StackLayout>
     </ContentPage.Content>
