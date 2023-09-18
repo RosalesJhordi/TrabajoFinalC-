@@ -29,5 +29,6 @@ namespace App1.ViewModels
 		{
 			IsPwdVisible = isChecked; // contraseña visible
 		}
+
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using App1.Services;
 using App1.Views;
 using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +10,7 @@ namespace App1
 	public partial class App : Application
 	{
 
+
 		public App()
 		{
 			InitializeComponent();
@@ -16,7 +18,6 @@ namespace App1
 			DependencyService.Register<MockDataStore>();
 			MainPage = new AppShell();
 		}
-
 		protected override void OnStart()
 		{
 		}
