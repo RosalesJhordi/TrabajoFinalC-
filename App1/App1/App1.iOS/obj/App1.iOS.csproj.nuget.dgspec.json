@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1.iOS\\App1.iOS.csproj": {}
+    "C:\\RosalesC#\\App1\\App1\\App1.iOS\\App1.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1.iOS\\App1.iOS.csproj": {
+    "C:\\RosalesC#\\App1\\App1\\App1.iOS\\App1.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
+        "projectUniqueName": "C:\\RosalesC#\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
         "projectName": "App1.iOS",
-        "projectPath": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
+        "projectPath": "C:\\RosalesC#\\App1\\App1\\App1.iOS\\App1.iOS.csproj",
         "packagesPath": "C:\\Users\\Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1.iOS\\obj\\",
+        "outputPath": "C:\\RosalesC#\\App1\\App1\\App1.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1\\App1.csproj": {
-                "projectPath": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1\\App1.csproj"
+              "C:\\RosalesC#\\App1\\App1\\App1\\App1.csproj": {
+                "projectPath": "C:\\RosalesC#\\App1\\App1\\App1\\App1.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1\\App1.csproj": {
+    "C:\\RosalesC#\\App1\\App1\\App1\\App1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1\\App1.csproj",
+        "projectUniqueName": "C:\\RosalesC#\\App1\\App1\\App1\\App1.csproj",
         "projectName": "App1",
-        "projectPath": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1\\App1.csproj",
+        "projectPath": "C:\\RosalesC#\\App1\\App1\\App1\\App1.csproj",
         "packagesPath": "C:\\Users\\Equipo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Equipo\\source\\repos\\App1\\App1\\App1\\obj\\",
+        "outputPath": "C:\\RosalesC#\\App1\\App1\\App1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 using TrabajoFinal.Base_Datos;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 
 namespace TrabajoFinal.FormHijas
 {
@@ -127,11 +128,11 @@ namespace TrabajoFinal.FormHijas
                 if(pwdd1 == pwdd2)
                 {
                     ConexionBD cone = new ConexionBD();
-                    using (SqlConnection conex = cone.AbrirConexion())
+                    using (SQLiteConnection conex = cone.AbrirConexion())
                     {
                         string query = "UPDATE Estudiantes SET Contrasena = @pwd WHERE Email = @ema AND Apellidos = @ape";
 
-                        using (SqlCommand comm = new SqlCommand(query, conex))
+                        using (SQLiteCommand comm = new SQLiteCommand(query, conex))
                         {
                             comm.Parameters.AddWithValue("@pwd", pwdhash);
                             comm.Parameters.AddWithValue("@ema", email);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -26,42 +27,41 @@ namespace TrabajoFinal.FormHijas
             series2.Palette = ChartColorPalette.SeaGreen; // Paleta de colores para las porciones de la dona
             series2.CustomProperties = "DoughnutRadius=60, PieDrawingStyle=Concave";
 
-            Dictionary<string, string> nivelQueries = new Dictionary<string, string>
-            {
-                 { "Secundaria", "SECUNDARIA" },
-                 { "Primaria", "PRIMARIA" },
-                 { "Inicial", "INICIAL" }
-            };
+			Dictionary<string, string> nivelQueries = new Dictionary<string, string>
+			{
+				{ "Secundaria", "Secundaria" },
+				{ "Primaria", "Primaria" },
+				{ "Inicial", "Inicial" }
+			};
+			Color[] colors = new Color[] { Color.Blue, Color.Red, Color.Green };
+			foreach (var nivelQuery in nivelQueries)
+			{
+				string nivel = nivelQuery.Key;
+				string query = "SELECT COUNT(*) FROM Estudiantes WHERE Nivel = @Nivel";
+				SQLiteConnection conex = conexion.AbrirConexion();
+				using (SQLiteCommand command = new SQLiteCommand(query, conex))
+			{
+			command.Parameters.AddWithValue("@Nivel", nivelQuery.Value);
+			int count = Convert.ToInt32(command.ExecuteScalar());
+			
+			DataPoint dataPoint = new DataPoint
+			{
+				YValues = new double[] { count },
+				IsValueShownAsLabel = true,
+				Label = nivel,
+				Color = colors[nivelQueries.Keys.ToList().IndexOf(nivel)],
+				LabelForeColor = Color.White
+			};
+			series2.Points.Add(dataPoint);
+		}
+	}
 
-            // Definir colores específicos para cada nivel
-            Color[] colors = new Color[] { Color.Blue, Color.Red, Color.Green };
+			// Agregar la serie al gráfico
+			Cantidad.Series.Add(series2);
 
-            for (int i = 0; i < nivelQueries.Count; i++)
-            {
-                string nivel = nivelQueries.ElementAt(i).Key;
-                string query = "SELECT COUNT(*) FROM Estudiantes WHERE Nivel = @Nivel";
+		}
 
-                SqlConnection sqlConnection = conexion.AbrirConexion();
-
-                using (SqlCommand command = new SqlCommand(query, sqlConnection))
-                {
-                    command.Parameters.AddWithValue("@Nivel", nivelQueries.ElementAt(i).Value);
-                    int count = (int)command.ExecuteScalar();
-
-                    DataPoint dataPoint = new DataPoint();
-                    dataPoint.SetValueY(count);
-                    dataPoint.IsValueShownAsLabel = true;
-                    dataPoint.Label = nivel; // Mostrar solo el nivel en la leyenda
-                    dataPoint.Color = colors[i]; // Asignar un color específico
-                    dataPoint.LabelForeColor = Color.White;
-                    series2.Points.Add(dataPoint);
-                }
-            }
-
-            Cantidad.Series.Add(series2);
-        }
-
-        private void Inicio_Load(object sender, EventArgs e)
+		private void Inicio_Load(object sender, EventArgs e)
         {
         }
 

@@ -8,6 +8,7 @@ namespace TrabajoFinal
 {
     public partial class Form1 : Form
     {
+
         private const int WM_SYSCOMMAND = 0x112;
         private const int SC_MOVE = 0xF012;
         private const int HTCAPTION = 0x2;
@@ -83,7 +84,7 @@ namespace TrabajoFinal
         private void Form1_Load(object sender, EventArgs e)
         {
             AbrirFormHija(new Inicio());
-        }
+		}
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {

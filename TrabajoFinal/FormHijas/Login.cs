@@ -4,6 +4,8 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using TrabajoFinal.Base_Datos;
+using Mono.Data.Sqlite;
+using System.Data.SQLite;
 
 namespace TrabajoFinal.FormHijas
 {
@@ -67,18 +69,17 @@ namespace TrabajoFinal.FormHijas
                 PanelAdmin admin = new PanelAdmin();
                 admin.Show();
             }
-            else
-            {
-                SqlConnection conex = conexion.AbrirConexion();
-                string query = "SELECT * FROM Estudiantes WHERE Email = @em";
+			else
+			{
+				string query = "SELECT * FROM Estudiantes WHERE Email = @em";
+				SQLiteConnection conex = conexion.AbrirConexion();
+				using (SQLiteCommand comm = new SQLiteCommand(query, conex))
+				{
+					comm.Parameters.AddWithValue("@em", email);
 
-                using (SqlCommand comm = new SqlCommand(query, conex))
-                {
-                    comm.Parameters.AddWithValue("@em", email);
-
-                    using (SqlDataReader reader = comm.ExecuteReader())
-                    {
-                        if (reader.HasRows)
+					using (SQLiteDataReader reader = comm.ExecuteReader())
+					{
+						if (reader.HasRows)
                         {
                             while (reader.Read())
                             {

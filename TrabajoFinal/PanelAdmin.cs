@@ -11,6 +11,7 @@ using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Data.Common;
 using System.Security.Cryptography;
+using System.Data.SQLite;
 
 namespace TrabajoFinal
 {
@@ -91,9 +92,9 @@ namespace TrabajoFinal
         {
             try
             {
-                SqlConnection sqlConnection = conexion.AbrirConexion();
+                SQLiteConnection sqlConnection = conexion.AbrirConexion();
                 string consulta = "SELECT Id,Nombres,Apellidos,Direccion,Email,Nivel FROM Estudiantes";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(consulta, sqlConnection);
+                SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(consulta, sqlConnection);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 Tabla.DataSource = dataTable;
@@ -121,10 +122,10 @@ namespace TrabajoFinal
                 int rowIndex = Tabla.SelectedCells[0].RowIndex;// Obtiene índice de la fila
                 string valorId = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();//obtiene valo
 
-                SqlConnection sqlConnection = conexion.AbrirConexion();
+                SQLiteConnection sqlConnection = conexion.AbrirConexion();
                 string consulta = "DELETE FROM Estudiantes WHERE Id = @id";
 
-                using (SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection))
+                using (SQLiteCommand sqlCommand = new SQLiteCommand(consulta, sqlConnection))
                 {
                     sqlCommand.Parameters.AddWithValue("@id", valorId);
                     int filasEliminadas = sqlCommand.ExecuteNonQuery();// Ejecutar la consulta DELETE
@@ -186,10 +187,10 @@ namespace TrabajoFinal
                     imagenBytes = ms.ToArray();
                 }
 
-                SqlConnection conex = conexion.AbrirConexion();
+				SQLiteConnection conex = conexion.AbrirConexion();
                 string query = "INSERT INTO Estudiantes (Nombres,Apellidos,Telefono,Direccion,Email,Contrasena,Nivel,Perfil) VALUES (@nm,@ape,@tel,@dir,@ema,@pwd,@nvl,@perfil)";
 
-                using (SqlCommand comm = new SqlCommand(query,conex))
+                using (SQLiteCommand comm = new SQLiteCommand(query,conex))
                 {
                     comm.Parameters.AddWithValue("@nm", nm);
                     comm.Parameters.AddWithValue("@ape", ape);
@@ -198,8 +199,8 @@ namespace TrabajoFinal
                     comm.Parameters.AddWithValue("@ema", ema);
                     comm.Parameters.AddWithValue("@pwd", pwdhash);
                     comm.Parameters.AddWithValue("@nvl", nvl);
-                    comm.Parameters.Add("@perfil", SqlDbType.VarBinary).Value = imagenBytes;
-                    int filasEliminadas = comm.ExecuteNonQuery();// Ejecutar la consulta DELETE
+					comm.Parameters.Add("@img", DbType.Binary).Value = imagenBytes;
+					int filasEliminadas = comm.ExecuteNonQuery();// Ejecutar la consulta DELETE
 
                 if (filasEliminadas > 0)
                 {
@@ -246,10 +247,10 @@ namespace TrabajoFinal
             string dire = input_dir.Text;
             string email = input_ema.Text;
 
-            SqlConnection sqlConnection = conexion.AbrirConexion();
+			SQLiteConnection sqlConnection = conexion.AbrirConexion();
             string consulta = "UPDATE Estudiantes SET Nombres = @nm,Apellidos = @Ap, Direccion = @Dir, Email = @Em WHERE Id = @Id";
 
-            using (SqlCommand sqlCommand = new SqlCommand(consulta, sqlConnection))
+            using (SQLiteCommand sqlCommand = new SQLiteCommand(consulta, sqlConnection))
             {
                 sqlCommand.Parameters.AddWithValue("@nm", nomb);
                 sqlCommand.Parameters.AddWithValue("@Ap", apel);
@@ -331,13 +332,13 @@ namespace TrabajoFinal
 
                 try
                 {
-                    SqlConnection sqlConnection = conexion.AbrirConexion();
+					SQLiteConnection sqlConnection = conexion.AbrirConexion();
                     string consulta = "SELECT Id, Nombres, Apellidos, Direccion, Email, Nivel FROM Estudiantes WHERE Nivel = @nvl";
-                    using (SqlCommand filtro = new SqlCommand(consulta, sqlConnection))
+                    using (SQLiteCommand filtro = new SQLiteCommand(consulta, sqlConnection))
                     {
                         filtro.Parameters.AddWithValue("@nvl", filt);
 
-                        SqlDataAdapter dataAdapter = new SqlDataAdapter(filtro);
+						SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(filtro);
                         DataTable dataTable = new DataTable();
 
                         dataAdapter.Fill(dataTable);
@@ -379,14 +380,14 @@ namespace TrabajoFinal
                 byte[] perfil = null;
 
                 ConexionBD cone = new ConexionBD();
-                using (SqlConnection conex = cone.AbrirConexion())
+                using (SQLiteConnection conex = cone.AbrirConexion())
                 {
                     string query = "SELECT Nombres, Apellidos, Telefono, Direccion, Nivel, Perfil FROM Estudiantes WHERE Id = @id";
 
-                    using (SqlCommand comm = new SqlCommand(query, conex))
+                    using (SQLiteCommand comm = new SQLiteCommand(query, conex))
                     {
                         comm.Parameters.AddWithValue("@id", Id);
-                        using (SqlDataReader reader = comm.ExecuteReader())
+                        using (SQLiteDataReader reader = comm.ExecuteReader())
                         {
                             if (reader.Read())
                             {

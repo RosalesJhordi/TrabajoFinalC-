@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -109,9 +110,9 @@ namespace TrabajoFinal.FormHijas
                     Perfil.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     imagenBytes = ms.ToArray();
                 }
-                SqlConnection sqlConnection = conexion.AbrirConexion();
-                string query = "INSERT INTO Estudiantes (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
-                using (SqlCommand cmd = new SqlCommand(query, sqlConnection))
+				SQLiteConnection sqlConnection = conexion.AbrirConexion();
+				string query = "INSERT INTO Estudiantes (Nombres, Apellidos, Telefono, Direccion, Email, Contrasena, Nivel, Perfil) VALUES (@nom, @ape, @tel, @dir, @ema, @pwd, @nvl, @img)";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, sqlConnection))
                 {
                         cmd.Parameters.AddWithValue("@nom", nom);
                         cmd.Parameters.AddWithValue("@ape", ape);
@@ -120,9 +121,9 @@ namespace TrabajoFinal.FormHijas
                         cmd.Parameters.AddWithValue("@ema", ema);
                         cmd.Parameters.AddWithValue("@pwd", pwdhash);
                         cmd.Parameters.AddWithValue("@nvl", nvl);
-                        cmd.Parameters.Add("@img", SqlDbType.VarBinary).Value = imagenBytes;
+					    cmd.Parameters.Add("@img", DbType.Binary).Value = imagenBytes;
 
-                        int filasAfect = cmd.ExecuteNonQuery();
+					int filasAfect = cmd.ExecuteNonQuery();
                         if (filasAfect > 0)
                         {
                             MessageBox.Show("Matriculado exitosamente");

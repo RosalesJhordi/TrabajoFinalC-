@@ -12,8 +12,8 @@
         <StackLayout Padding="0,0,0,0" VerticalOptions="StartAndExpand">
             <?iamegn de principio ?>
             <Grid>
-                <BoxView Color="Blue" WidthRequest="200" HeightRequest="200" />
-                <Image Source="xamarin_logo.png" Aspect="AspectFit" WidthRequest="150" HeightRequest="150" />
+                <BoxView  WidthRequest="200" HeightRequest="200" />
+                <Image Source="log.jpg" Aspect="AspectFit" WidthRequest="250" HeightRequest="250"/>
             </Grid>
             <Label Text="LOGIN" TextColor="Black" HorizontalTextAlignment="Center" FontSize="24" Margin="0,50,0,30"/>
             <Frame BackgroundColor="Azure" Padding="5" CornerRadius="10" Margin="10,0,10,0">
