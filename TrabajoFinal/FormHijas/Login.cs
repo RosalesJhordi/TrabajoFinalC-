@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using TrabajoFinal.Base_Datos;
 using Mono.Data.Sqlite;
 using System.Data.SQLite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TrabajoFinal.FormHijas
 {
@@ -58,51 +59,116 @@ namespace TrabajoFinal.FormHijas
         }
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string email = input_email.Text;
-            string pwd = input_pwd.Text;
+            try {
+                string email = input_email.Text;
+                string pwd = input_pwd.Text;
 
-            string userAdmin = "Admin";
-            string pwdAdmin = "Admin";
+                string userAdmin = "Admin";
+                string pwdAdmin = "Admin";
 
-            if (email == userAdmin && pwd == pwdAdmin)
-            {
-                PanelAdmin admin = new PanelAdmin();
-                admin.Show();
-            }
-			else
-			{
-				string query = "SELECT * FROM Estudiantes WHERE Email = @em";
-				SQLiteConnection conex = conexion.AbrirConexion();
-				using (SQLiteCommand comm = new SQLiteCommand(query, conex))
-				{
-					comm.Parameters.AddWithValue("@em", email);
+                if (email == userAdmin && pwd == pwdAdmin)
+                {
+                    PanelAdmin admin = new PanelAdmin();
+                    admin.Show();
+                }
+                else
+                {
+                    string query = "SELECT * FROM Estudiantes WHERE Email = @em";
+                    SQLiteConnection conex = conexion.AbrirConexion();
+                    using (SQLiteCommand comm = new SQLiteCommand(query, conex))
+                    {
+                        comm.Parameters.AddWithValue("@em", email);
 
-					using (SQLiteDataReader reader = comm.ExecuteReader())
-					{
-						if (reader.HasRows)
+                        using (SQLiteDataReader reader = comm.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.HasRows)
                             {
-                                string pwd2 = reader["Contrasena"].ToString();
-                                //función Desencriptar
-                                string pwdhash = Seguridad.Desencriptar(pwd2);
-                                if(pwd == pwdhash)
+                                while (reader.Read())
                                 {
-                                    MessageBox.Show("Correcto");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Falla");
+                                    string pwd2 = reader["Contrasena"].ToString();
+                                    //función Desencriptar
+                                    string pwdhash = Seguridad.Desencriptar(pwd2);
+                                    string Nombre = reader["Nombres"].ToString();
+                                    string Apellidos = reader["Apellidos"].ToString();
+                                    string Telefono = reader["Telefono"].ToString();
+                                    string Direccion = reader["Direccion"].ToString();
+                                    string Email = reader["Email"].ToString();
+                                    string Nivel = reader["Nivel"].ToString();
+                                    byte[] perfilBytes = (byte[])reader["Perfil"];
+									System.Drawing.Image perfilImagen = null;
+
+									if (perfilBytes != null && perfilBytes.Length > 0)
+									{
+										// Convierte los bytes
+										System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
+										perfilImagen = (System.Drawing.Image)converter.ConvertFrom(perfilBytes);
+									}
+									if (pwd == pwdhash)
+                                    {
+                                        PaginaEstudiante est = new PaginaEstudiante(Nombre, Apellidos, Telefono, Direccion, Email, Nivel, perfilImagen);
+                                        est.Show();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Falla");
+                                    }
                                 }
                             }
-                        }
-                        else
-                        {
-                            // No se encontraron resultados
+                            else if(reader.HasRows == false)
+                            {
+								string query1 = "SELECT * FROM Profesores WHERE Email = @em";
+								using (SQLiteCommand comm1 = new SQLiteCommand(query1, conex))
+								{
+									comm1.Parameters.AddWithValue("@em", email);
+
+									using (SQLiteDataReader reader1 = comm1.ExecuteReader())
+									{
+										if (reader1.HasRows)
+										{
+											while (reader1.Read())
+											{
+												string pwd2 = reader1["Contraseña"].ToString();
+												//función Desencriptar
+												string pwdhash = Seguridad.Desencriptar(pwd2);
+												string Nombre = reader1["Nombres"].ToString();
+												string Apellidos = reader1["Apellidos"].ToString();
+												string Telefono = reader1["Telefono"].ToString();
+												string Email = reader1["Email"].ToString();
+												string Nivel = reader1["Nivel_Encargado"].ToString();
+												byte[] perfilBytes = (byte[])reader1["Perfil"];
+												System.Drawing.Image perfilImagen = null;
+
+												if (perfilBytes != null && perfilBytes.Length > 0)
+												{
+													// Convierte los bytes
+													System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
+													perfilImagen = (System.Drawing.Image)converter.ConvertFrom(perfilBytes);
+												}
+												if (pwd == pwdhash)
+												{
+													PaginaProfesor pr = new PaginaProfesor(Nombre,Apellidos,Telefono,Email,Nivel,perfilImagen);
+                                                    pr.Show();
+												}
+												else
+												{
+													MessageBox.Show("Falla");
+												}
+											}
+										}
+									}
+								}
+							}
+                            else
+                            {
+                                MessageBox.Show("Error: Este usuario no existe");
+                            }
                         }
                     }
                 }
-            }
+            } catch (Exception ex)
+            {
+				MessageBox.Show("Error: " + ex.Message);
+			}
         }
-    }
+	}
 }

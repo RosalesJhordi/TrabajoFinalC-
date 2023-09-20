@@ -199,10 +199,10 @@ namespace TrabajoFinal
                     comm.Parameters.AddWithValue("@ema", ema);
                     comm.Parameters.AddWithValue("@pwd", pwdhash);
                     comm.Parameters.AddWithValue("@nvl", nvl);
-					comm.Parameters.Add("@img", DbType.Binary).Value = imagenBytes;
-					int filasEliminadas = comm.ExecuteNonQuery();// Ejecutar la consulta DELETE
+					comm.Parameters.Add("@perfil", DbType.Binary).Value = imagenBytes;
+					int filas = comm.ExecuteNonQuery();
 
-                if (filasEliminadas > 0)
+                if (filas > 0)
                 {
                     MessageBox.Show("Añadido exitosamente");
                     CargarDatos(); //recargar los datos
@@ -417,5 +417,11 @@ namespace TrabajoFinal
                 MessageBox.Show("No se ha seleccionado ninguna estudiante");
             }
         }
-    }
+
+		private void Añadir_Profe_Click(object sender, EventArgs e)
+		{
+            AñadirProfe an = new AñadirProfe();
+            an.Show();
+		}
+	}
 }

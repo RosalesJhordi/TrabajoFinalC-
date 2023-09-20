@@ -1,0 +1,15 @@
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.csproj.AssemblyReference.cache
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.GeneratedMSBuildEditorConfig.editorconfig
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.AssemblyInfoInputs.cache
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.AssemblyInfo.cs
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.csproj.CoreCompileInputs.cache
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.dll
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\refint\Login.dll
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\Login.pdb
+C:\RosalesC#\Login\Login\bin\Debug\netstandard2.0\Login.deps.json
+C:\RosalesC#\Login\Login\bin\Debug\netstandard2.0\Login.dll
+C:\RosalesC#\Login\Login\bin\Debug\netstandard2.0\ref\Login.dll
+C:\RosalesC#\Login\Login\bin\Debug\netstandard2.0\Login.pdb
+C:\RosalesC#\Login\Login\obj\Debug\netstandard2.0\XamlC.stamp

@@ -62,6 +62,7 @@
 			this.Perfil = new System.Windows.Forms.PictureBox();
 			this.btn_select = new System.Windows.Forms.Button();
 			this.Filtrar = new System.Windows.Forms.PictureBox();
+			this.Añadir_Profe = new System.Windows.Forms.Button();
 			this.Barra_Control.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.OFF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ON)).BeginInit();
@@ -323,7 +324,7 @@
 			this.btn_verdatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_verdatos.Image = ((System.Drawing.Image)(resources.GetObject("btn_verdatos.Image")));
 			this.btn_verdatos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btn_verdatos.Location = new System.Drawing.Point(223, 721);
+			this.btn_verdatos.Location = new System.Drawing.Point(222, 721);
 			this.btn_verdatos.Name = "btn_verdatos";
 			this.btn_verdatos.Size = new System.Drawing.Size(190, 47);
 			this.btn_verdatos.TabIndex = 23;
@@ -430,11 +431,26 @@
 			this.Filtrar.TabStop = false;
 			this.Filtrar.Click += new System.EventHandler(this.Filtrar_Click);
 			// 
+			// Añadir_Profe
+			// 
+			this.Añadir_Profe.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Añadir_Profe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Añadir_Profe.Image = ((System.Drawing.Image)(resources.GetObject("Añadir_Profe.Image")));
+			this.Añadir_Profe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Añadir_Profe.Location = new System.Drawing.Point(672, 721);
+			this.Añadir_Profe.Name = "Añadir_Profe";
+			this.Añadir_Profe.Size = new System.Drawing.Size(221, 47);
+			this.Añadir_Profe.TabIndex = 33;
+			this.Añadir_Profe.Text = "Añadir Profesor";
+			this.Añadir_Profe.UseVisualStyleBackColor = true;
+			this.Añadir_Profe.Click += new System.EventHandler(this.Añadir_Profe_Click);
+			// 
 			// PanelAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1404, 780);
+			this.Controls.Add(this.Añadir_Profe);
 			this.Controls.Add(this.Filtrar);
 			this.Controls.Add(this.btn_select);
 			this.Controls.Add(this.Perfil);
@@ -513,5 +529,6 @@
         private System.Windows.Forms.PictureBox Perfil;
         private System.Windows.Forms.Button btn_select;
         private System.Windows.Forms.PictureBox Filtrar;
-    }
+		private System.Windows.Forms.Button Añadir_Profe;
+	}
 }

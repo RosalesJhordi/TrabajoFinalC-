@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Dapper.2.0.151\lib\net461\Dapper.dll</HintPath>
     </Reference>
@@ -44,6 +47,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Enums.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7ea1c1650d506225, processorArchitecture=MSIL">
+      <HintPath>packages\Enums.NET.4.0.1\lib\net45\Enums.NET.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Auth, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FirebaseAuthentication.net.4.1.0\lib\netstandard2.0\Firebase.Auth.dll</HintPath>
@@ -72,20 +78,47 @@
     <Reference Include="Google.Apis.PlatformServices, Version=1.62.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>packages\Google.Apis.1.62.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=4.15.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Numerics.Signed.4.15.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0-rc.1.23419.4\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=2.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.2.3.2\lib\net462\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Core, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="SimpleStack.Orm, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\SimpleStack.Orm.1.2.5\lib\netstandard2.0\SimpleStack.Orm.dll</HintPath>
     </Reference>
     <Reference Include="SimpleStack.Orm.SDSQLite, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\SimpleStack.Orm.SDSQLite.1.2.5\lib\netstandard2.0\SimpleStack.Orm.SDSQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.ImageSharp.2.1.4\lib\net472\SixLabors.ImageSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -95,6 +128,7 @@
       <HintPath>packages\System.Collections.Immutable.8.0.0-rc.1.23419.4\lib\net462\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
@@ -115,7 +149,21 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.7.0.0-preview.2.22152.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.6.0.1\lib\net461\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System.Speech" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -134,12 +182,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirProfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirProfe.Designer.cs">
+      <DependentUpon>AñadirProfe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Base_Datos\ConexionBD.cs" />
     <Compile Include="Base_Datos\Seguridad.cs" />
     <Compile Include="BD_IE_CMDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_IE_CMDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FomsEstudiante\ListTareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FomsEstudiante\ListTareas.Designer.cs">
+      <DependentUpon>ListTareas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FomsEstudiante\Tareas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FomsEstudiante\Tareas.Designer.cs">
+      <DependentUpon>Tareas.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -183,11 +249,35 @@
     <Compile Include="FormHijas\Matricula.Designer.cs">
       <DependentUpon>Matricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHijas\PaginaEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHijas\PaginaEstudiante.Designer.cs">
+      <DependentUpon>PaginaEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHijas\Restablecer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHijas\Restablecer.Designer.cs">
       <DependentUpon>Restablecer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsProfesor\Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsProfesor\Cuenta.Designer.cs">
+      <DependentUpon>Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsProfesor\DejarTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsProfesor\DejarTarea.Designer.cs">
+      <DependentUpon>DejarTarea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaginaProfesor.Designer.cs">
+      <DependentUpon>PaginaProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="PanelAdmin.cs">
       <SubType>Form</SubType>
@@ -197,6 +287,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AñadirProfe.resx">
+      <DependentUpon>AñadirProfe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FomsEstudiante\ListTareas.resx">
+      <DependentUpon>ListTareas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FomsEstudiante\Tareas.resx">
+      <DependentUpon>Tareas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,8 +317,20 @@
     <EmbeddedResource Include="FormHijas\Matricula.resx">
       <DependentUpon>Matricula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHijas\PaginaEstudiante.resx">
+      <DependentUpon>PaginaEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHijas\Restablecer.resx">
       <DependentUpon>Restablecer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsProfesor\Cuenta.resx">
+      <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsProfesor\DejarTarea.resx">
+      <DependentUpon>DejarTarea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaginaProfesor.resx">
+      <DependentUpon>PaginaProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PanelAdmin.resx">
       <DependentUpon>PanelAdmin.cs</DependentUpon>
