@@ -31,6 +31,7 @@
 			System.Windows.Forms.Button Cerrasesion;
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaEstudiante));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.APE = new System.Windows.Forms.Label();
 			this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.Cuenta = new System.Windows.Forms.Button();
@@ -39,31 +40,11 @@
 			this.Tareas = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.Contenedor = new System.Windows.Forms.Panel();
-			this.APE = new System.Windows.Forms.Label();
 			Cerrasesion = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// panel1
-			// 
-			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-			this.panel1.Controls.Add(this.APE);
-			this.panel1.Controls.Add(Cerrasesion);
-			this.panel1.Controls.Add(this.flowLayoutPanel1);
-			this.panel1.Controls.Add(this.pictureBox2);
-			this.panel1.Controls.Add(this.Cuenta);
-			this.panel1.Controls.Add(this.flowLayoutPanel4);
-			this.panel1.Controls.Add(this.flowLayoutPanel3);
-			this.panel1.Controls.Add(this.Tareas);
-			this.panel1.Controls.Add(this.pictureBox1);
-			this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(323, 733);
-			this.panel1.TabIndex = 3;
 			// 
 			// Cerrasesion
 			// 
@@ -86,6 +67,36 @@
 			Cerrasesion.Text = "Cerrar sesion";
 			Cerrasesion.UseVisualStyleBackColor = false;
 			Cerrasesion.Click += new System.EventHandler(this.Cerrasesion_Click);
+			// 
+			// panel1
+			// 
+			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+			this.panel1.Controls.Add(this.APE);
+			this.panel1.Controls.Add(Cerrasesion);
+			this.panel1.Controls.Add(this.flowLayoutPanel1);
+			this.panel1.Controls.Add(this.pictureBox2);
+			this.panel1.Controls.Add(this.Cuenta);
+			this.panel1.Controls.Add(this.flowLayoutPanel4);
+			this.panel1.Controls.Add(this.flowLayoutPanel3);
+			this.panel1.Controls.Add(this.Tareas);
+			this.panel1.Controls.Add(this.pictureBox1);
+			this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(323, 733);
+			this.panel1.TabIndex = 3;
+			// 
+			// APE
+			// 
+			this.APE.AutoSize = true;
+			this.APE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.APE.ForeColor = System.Drawing.Color.White;
+			this.APE.Location = new System.Drawing.Point(8, 704);
+			this.APE.Name = "APE";
+			this.APE.Size = new System.Drawing.Size(53, 20);
+			this.APE.TabIndex = 16;
+			this.APE.Text = "label1";
 			// 
 			// flowLayoutPanel1
 			// 
@@ -182,17 +193,6 @@
 			this.Contenedor.Name = "Contenedor";
 			this.Contenedor.Size = new System.Drawing.Size(959, 733);
 			this.Contenedor.TabIndex = 4;
-			// 
-			// APE
-			// 
-			this.APE.AutoSize = true;
-			this.APE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.APE.ForeColor = System.Drawing.Color.White;
-			this.APE.Location = new System.Drawing.Point(8, 704);
-			this.APE.Name = "APE";
-			this.APE.Size = new System.Drawing.Size(53, 20);
-			this.APE.TabIndex = 16;
-			this.APE.Text = "label1";
 			// 
 			// PaginaEstudiante
 			// 

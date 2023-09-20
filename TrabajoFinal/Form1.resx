@@ -280,7 +280,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnMini.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1202, 4</value>
+    <value>1202, 5</value>
   </data>
   <data name="BtnMini.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
@@ -310,7 +310,7 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.2pt</value>
+    <value>Microsoft Sans Serif, 10.2pt, style=Bold</value>
   </data>
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -319,7 +319,7 @@
     <value>26, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 20</value>
+    <value>344, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -827,7 +827,7 @@
   <data name="Btn_Soli_Info.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAP1SURBVFhHtZd9
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAP1SURBVFhHtZd9
         aBtlHMd7L0kvd0mathtp0/Qla9JuTTf7mkvbtZkdXWtj7Tqrc/tj1JdtiuJApmOsZa5TnApaq8Kc2FVs
         XaeT2dExkYFDQR0K/iWIIMgUhwhuaq5bQ83X5y5LbZJLLsnSBz7cwyX5fT/8fg9JLud2FssaxiiKXiRb
         pAtFsYus3vwc2We8+JwcKuTpOoG2u0+nhdj9Hipq9isSt2pltPIJ8A2cJwUnUOM5mDKerpNw1b8Y6UbG
@@ -890,7 +890,7 @@
   <data name="BtnMatricula.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGwSURBVFhHYxgF
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGwSURBVFhHYxgF
         o2AUwAA/v61RsH/YwYzE2BuhXgYHQzy0D9AA77cxMVgNsgtqLQKALP8PAg8s/v+/zkBTbG1ssApqLQKU
         5GXfAzvgOhOGBmrj2ACN/VBrEaC0IPsBxAHYNVETxwVqHIBaiwCUOuDQEv7/bUVyODFIHqaWJg4AWcJw
         7iJODJKHqSXJAR9Os/zvqlX6H9QWCaZBfHQ1IEx1B3w+y/x/YpP8f59J6f/Fz+4FGyJ89sB/r3mF/5vK
@@ -985,7 +985,7 @@
   <data name="BtnLogin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qwAAAKsB1E2SqwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOnSURBVFhHxZVb
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOnSURBVFhHxZVb
         SBRRGMe3KCoJoigvQRcf0krbLktGBGm41e6SUJRkFkQXgozqqSCqp3rIQBS6IZRmijesLcpVR3dn3bYt
         2yhzIYLALkIXu0u1O6nzdc7WmT1n9hP1ZXv4wex35vt+/5k5M2sAgP8KWowlaDGWoMVYghYFHI4JaH0k
         jKAXLUKgfQF0yTehy/0B3DUqtFUEob1OArl8Ino+jyyPI70nCAHwNw6CVD4IctVb8DbYsPOjCkSaS5pD

@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
-using System.Reflection.Emit;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TrabajoFinal.Base_Datos;
 using TrabajoFinal.FormHijas;
 using System.IO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Data.Common;
-using System.Security.Cryptography;
 using System.Data.SQLite;
 
 namespace TrabajoFinal
@@ -27,7 +23,7 @@ namespace TrabajoFinal
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        //conexion 
+        //conexion OBJETO
         ConexionBD conexion = new ConexionBD();
 
         OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -39,8 +35,10 @@ namespace TrabajoFinal
             InitializeComponent();
 
             timer1 = new Timer();
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            timer1.Interval = 1000;// intervalo
+			timer1.Tick += timer1_Tick; //EVENTO
+
+            //OCULTAR FORM1
             foreach (Form form in Application.OpenForms)
             {
                 if (form is Form1)
@@ -49,13 +47,14 @@ namespace TrabajoFinal
                     break;
                 }
             }
+            //FILTRO
             Opciones.Height = 40;
             Opciones.Items.Add("Todo");
             Opciones.Items.Add("Inicial");
             Opciones.Items.Add("Primaria");
             Opciones.Items.Add("Secundaria");
             Opciones.SelectedIndex = 0;
-
+            //NIVEL ACAD
             OpcionesNivel.Items.Add("Seleciona Nivel (No selecionable)");
             OpcionesNivel.Items.Add("Inicial");
             OpcionesNivel.Items.Add("Primaria");
@@ -74,12 +73,12 @@ namespace TrabajoFinal
             OFF.Visible = true;
             timer1.Start();
         }
-
+        //EVENTO TIMER
         private void timer1_Tick(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //ARRASTRAR VENTANA
         private void Barra_Control_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -87,40 +86,42 @@ namespace TrabajoFinal
         }
 
         //datagrid cargar datos
-
         private void CargarDatos()
         {
             try
             {
-                SQLiteConnection sqlConnection = conexion.AbrirConexion();
+                SQLiteConnection sqlConnection = conexion.AbrirConexion(); //INICIAR CONEXIO
                 string consulta = "SELECT Id,Nombres,Apellidos,Direccion,Email,Nivel FROM Estudiantes";
+                //APADTADOR DE DATOS
                 SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(consulta, sqlConnection);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                Tabla.DataSource = dataTable;
+                DataTable dataTable = new DataTable(); //ALMACENA DATOS SEGUN EL SESULTADO DE LA CONSULTA
+                dataAdapter.Fill(dataTable); //LLENAR DATOS
+                Tabla.DataSource = dataTable; //AGREGA EL TABLE A UN DATAGRID
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message); //EXEPCION
             }
             finally
             {
-                conexion.CerrarConexion();
+                conexion.CerrarConexion(); // CERRA CONEXION
             }
         }
         //llamar funcion
         private void PanelAdmin_Load(object sender, EventArgs e)
         {
+            //CARGAR DATOS AL INICIAR
             CargarDatos();
         }
 
+        //ELIMINAR
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
 
             if (Tabla.SelectedCells.Count > 0)// Verificar si se seleccio celda
             {
                 int rowIndex = Tabla.SelectedCells[0].RowIndex;// Obtiene índice de la fila
-                string valorId = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();//obtiene valo
+                string valorId = Tabla.Rows[rowIndex].Cells["Id"].Value.ToString();//obtiene valor Id
 
                 SQLiteConnection sqlConnection = conexion.AbrirConexion();
                 string consulta = "DELETE FROM Estudiantes WHERE Id = @id";
@@ -148,6 +149,7 @@ namespace TrabajoFinal
 
         }
 
+        //ANADIR
         private void btn_añadir_Click(object sender, EventArgs e)
         {
             string nm = input_nm.Text;
@@ -158,9 +160,7 @@ namespace TrabajoFinal
             string pwd = input_pwd.Text;
             string nvl = OpcionesNivel.SelectedItem.ToString();
 
-            string pwdhash = Seguridad.Encriptar(pwd);
-            Console.WriteLine("Cadena Encriptada: " + pwdhash);
-
+            string pwdhash = Seguridad.Encriptar(pwd);//ENCRIPTAR
 
             // Verificar si se ha seleccionado un nivel
             if (nvl == "Selecciona Nivel (No seleccionable)")
@@ -202,16 +202,16 @@ namespace TrabajoFinal
 					comm.Parameters.Add("@perfil", DbType.Binary).Value = imagenBytes;
 					int filas = comm.ExecuteNonQuery();
 
-                if (filas > 0)
-                {
-                    MessageBox.Show("Añadido exitosamente");
-                    CargarDatos(); //recargar los datos
+                    if (filas > 0)
+                    {
+                        MessageBox.Show("Añadido exitosamente");
+                      CargarDatos(); //recargar los datos
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se añadio");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("No se añadio");
-                }
-            }
             }
             catch (SqlException ex)
             {
@@ -224,6 +224,7 @@ namespace TrabajoFinal
 
         }
 
+        //SELECIONAR IMAGEN
         private void btn_selec_Click(object sender, EventArgs e)
         {
             using (openFileDialog)
@@ -240,6 +241,7 @@ namespace TrabajoFinal
             }
         }
 
+        //ACTUALIZAR
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             string nomb = input_nm.Text;
@@ -272,6 +274,7 @@ namespace TrabajoFinal
             }
         }
 
+        //SELECIONAR USUARIO
         private void btn_select_Click(object sender, EventArgs e)
         {
             if (Tabla.SelectedCells.Count > 0)// Verificar si se seleccio celda
@@ -300,31 +303,39 @@ namespace TrabajoFinal
             }
         }
 
+
+        //BUSCAR
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             string buscado = input_buscar.Text;
-
-            foreach (DataGridViewRow fila in Tabla.Rows)
+			// Recorrer todas las filas de la tabla 
+			foreach (DataGridViewRow fila in Tabla.Rows)
             {
                 foreach (DataGridViewCell celda in fila.Cells)
                 {
-                    if (celda.Value != null && celda.Value.ToString().Equals(buscado, StringComparison.OrdinalIgnoreCase))
+					// Verificar si el valor de la celda no es nulo - igual a buscado
+					if (celda.Value != null && celda.Value.ToString().Equals(buscado, StringComparison.OrdinalIgnoreCase))
                     {
+                        //celda encontrada
                         Tabla.CurrentCell = celda;
-                        Tabla.FirstDisplayedScrollingRowIndex = fila.Index;
-                        return;
+                        Tabla.FirstDisplayedScrollingRowIndex = fila.Index; //mostrar fila donde esta
+                        return; // sali al encontrarla
                     }
                 }
             }
+            //si no encuntra el valor buscado
             MessageBox.Show("No encontrado");
         }
 
+
+        //FILTRAR
         private void Filtrar_Click(object sender, EventArgs e)
         {
-            string filt = Opciones.SelectedItem.ToString();
+            string filt = Opciones.SelectedItem.ToString(); // combobox
 
             if (filt == "Todo")
             {
+                //mostrar todos los niveles
                 CargarDatos();
             }
             else
@@ -365,6 +376,7 @@ namespace TrabajoFinal
             }
         }
 
+        //VER DATOS
         private void btn_verdatos_Click(object sender, EventArgs e)
         {
             if (Tabla.SelectedCells.Count > 0)// Verificar si se seleccio celda
@@ -403,14 +415,16 @@ namespace TrabajoFinal
                 }
                 System.Drawing.Image perfilImagen = null;
 
+                //verificar imagen
                 if (perfil != null && perfil.Length > 0)
                 {
-                    // Convierte los bytes
+                    // Convierte los bytes a img
                     System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
                     perfilImagen = (System.Drawing.Image)converter.ConvertFrom(perfil);
                 }
+                //abrimos form y pasamos argumentos
                 DatosInfo info = new DatosInfo(nombres, apellidos, telefono, direccion, nivel, perfilImagen);
-                info.Show();
+                info.Show(); // mostramos
             }
             else
             {
@@ -418,8 +432,10 @@ namespace TrabajoFinal
             }
         }
 
+        //AÑADIR PROFESOR
 		private void Añadir_Profe_Click(object sender, EventArgs e)
-		{
+		{   
+            //abrimos y mostramos el fomulario
             AñadirProfe an = new AñadirProfe();
             an.Show();
 		}

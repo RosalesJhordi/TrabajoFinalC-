@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrabajoFinal.FomsEstudiante;
 using TrabajoFinal.FormsProfesor;
@@ -20,11 +14,13 @@ namespace TrabajoFinal
 		public string ema;
 		public string nivl;
 		public Image perfile;
+		//PARAMETROS
 		public PaginaProfesor(string nm,string ape,string tel,string em,string nvl, Image perfil)
 		{
 			InitializeComponent();
 			APE.Text = ape.ToString();
 
+			//VERIFICAMOS Y CERRAMOS FORM1
 			foreach (Form form in Application.OpenForms)
 			{
 				if (form is Form1)
@@ -64,6 +60,7 @@ namespace TrabajoFinal
 
 		private void Cuenta_Click(object sender, EventArgs e)
 		{
+			//PASAMOS ARGUMENTOS
 			AbrirFormHija(new Cuenta(nom, apel, tele, ema, nivl, perfile));
 		}
 

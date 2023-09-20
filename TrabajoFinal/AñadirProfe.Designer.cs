@@ -59,6 +59,7 @@
 			// 
 			// Input_nm
 			// 
+			this.Input_nm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Input_nm.Location = new System.Drawing.Point(47, 61);
 			this.Input_nm.Multiline = true;
 			this.Input_nm.Name = "Input_nm";
@@ -77,6 +78,7 @@
 			// 
 			// Input_ape
 			// 
+			this.Input_ape.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Input_ape.Location = new System.Drawing.Point(47, 137);
 			this.Input_ape.Multiline = true;
 			this.Input_ape.Name = "Input_ape";
@@ -85,6 +87,7 @@
 			// 
 			// Input_tel
 			// 
+			this.Input_tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Input_tel.Location = new System.Drawing.Point(47, 212);
 			this.Input_tel.Multiline = true;
 			this.Input_tel.Name = "Input_tel";
@@ -93,6 +96,7 @@
 			// 
 			// Input_email
 			// 
+			this.Input_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Input_email.Location = new System.Drawing.Point(47, 291);
 			this.Input_email.Multiline = true;
 			this.Input_email.Name = "Input_email";
@@ -101,6 +105,7 @@
 			// 
 			// Input_pwd
 			// 
+			this.Input_pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Input_pwd.Location = new System.Drawing.Point(47, 376);
 			this.Input_pwd.Multiline = true;
 			this.Input_pwd.Name = "Input_pwd";
@@ -143,9 +148,9 @@
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.Location = new System.Drawing.Point(42, 429);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(98, 25);
+			this.label6.Size = new System.Drawing.Size(61, 25);
 			this.label6.TabIndex = 12;
-			this.label6.Text = "Nombres";
+			this.label6.Text = "Perfil";
 			// 
 			// label7
 			// 
@@ -153,14 +158,15 @@
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label7.Location = new System.Drawing.Point(45, 507);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(98, 25);
+			this.label7.Size = new System.Drawing.Size(170, 25);
 			this.label7.TabIndex = 13;
-			this.label7.Text = "Nombres";
+			this.label7.Text = "Nivel Encargado";
 			// 
 			// Añadir
 			// 
 			this.Añadir.BackColor = System.Drawing.Color.Blue;
 			this.Añadir.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Añadir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Añadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Añadir.ForeColor = System.Drawing.Color.White;
 			this.Añadir.Location = new System.Drawing.Point(140, 628);

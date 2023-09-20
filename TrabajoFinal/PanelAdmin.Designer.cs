@@ -63,6 +63,7 @@
 			this.btn_select = new System.Windows.Forms.Button();
 			this.Filtrar = new System.Windows.Forms.PictureBox();
 			this.Añadir_Profe = new System.Windows.Forms.Button();
+			this.label10 = new System.Windows.Forms.Label();
 			this.Barra_Control.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.OFF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ON)).BeginInit();
@@ -147,22 +148,23 @@
 			// input_buscar
 			// 
 			this.input_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.input_buscar.Location = new System.Drawing.Point(8, 82);
+			this.input_buscar.Location = new System.Drawing.Point(8, 94);
 			this.input_buscar.Multiline = true;
 			this.input_buscar.Name = "input_buscar";
-			this.input_buscar.Size = new System.Drawing.Size(431, 51);
+			this.input_buscar.Size = new System.Drawing.Size(431, 39);
 			this.input_buscar.TabIndex = 5;
 			this.input_buscar.UseWaitCursor = true;
 			// 
 			// btn_buscar
 			// 
 			this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btn_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
 			this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btn_buscar.Location = new System.Drawing.Point(458, 86);
+			this.btn_buscar.Location = new System.Drawing.Point(458, 94);
 			this.btn_buscar.Name = "btn_buscar";
-			this.btn_buscar.Size = new System.Drawing.Size(177, 47);
+			this.btn_buscar.Size = new System.Drawing.Size(177, 39);
 			this.btn_buscar.TabIndex = 6;
 			this.btn_buscar.Text = "Buscar";
 			this.btn_buscar.UseVisualStyleBackColor = true;
@@ -179,6 +181,7 @@
 			// btn_eliminar
 			// 
 			this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.Image")));
 			this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,6 +196,7 @@
 			// btn_añadir
 			// 
 			this.btn_añadir.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_añadir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btn_añadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_añadir.Image = ((System.Drawing.Image)(resources.GetObject("btn_añadir.Image")));
 			this.btn_añadir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,6 +211,7 @@
 			// btn_actualizar
 			// 
 			this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btn_actualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_actualizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_actualizar.Image")));
 			this.btn_actualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -321,6 +326,7 @@
 			// btn_verdatos
 			// 
 			this.btn_verdatos.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_verdatos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btn_verdatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_verdatos.Image = ((System.Drawing.Image)(resources.GetObject("btn_verdatos.Image")));
 			this.btn_verdatos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -408,6 +414,7 @@
 			// btn_select
 			// 
 			this.btn_select.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btn_select.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.btn_select.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_select.Image = ((System.Drawing.Image)(resources.GetObject("btn_select.Image")));
 			this.btn_select.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -434,6 +441,7 @@
 			// Añadir_Profe
 			// 
 			this.Añadir_Profe.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Añadir_Profe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.Añadir_Profe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Añadir_Profe.Image = ((System.Drawing.Image)(resources.GetObject("Añadir_Profe.Image")));
 			this.Añadir_Profe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -445,11 +453,24 @@
 			this.Añadir_Profe.UseVisualStyleBackColor = true;
 			this.Añadir_Profe.Click += new System.EventHandler(this.Añadir_Profe_Click);
 			// 
+			// label10
+			// 
+			this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.ForeColor = System.Drawing.Color.Black;
+			this.label10.Location = new System.Drawing.Point(652, 86);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(104, 18);
+			this.label10.TabIndex = 34;
+			this.label10.Text = "Filtrar por nivel";
+			// 
 			// PanelAdmin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1404, 780);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.Añadir_Profe);
 			this.Controls.Add(this.Filtrar);
 			this.Controls.Add(this.btn_select);
@@ -530,5 +551,6 @@
         private System.Windows.Forms.Button btn_select;
         private System.Windows.Forms.PictureBox Filtrar;
 		private System.Windows.Forms.Button Añadir_Profe;
+		private System.Windows.Forms.Label label10;
 	}
 }

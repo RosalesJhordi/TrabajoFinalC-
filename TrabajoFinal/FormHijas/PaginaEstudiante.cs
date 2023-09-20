@@ -51,13 +51,13 @@ namespace TrabajoFinal.FormHijas
 			{
 				control.Dispose();
 			}
-
+			// Configuramos el form hijo
 			Form formHijo = formHija as Form;
 			formHijo.TopLevel = false;
 			formHijo.Dock = DockStyle.Fill;
-			this.Contenedor.Controls.Add(formHijo);
+			this.Contenedor.Controls.Add(formHijo); // Agrega el form hijo al contenedor
 			this.Contenedor.Tag = formHijo;
-			formHijo.Show();
+			formHijo.Show(); // mostramos form hijo
 		}
 
 		private void Cerrasesion_Click(object sender, EventArgs e)
@@ -71,6 +71,7 @@ namespace TrabajoFinal.FormHijas
 
 		private void Cuenta_Click(object sender, EventArgs e)
 		{
+			//abrimos form hijo y pasamos datos POR ARGUMENTO
 			AbrirFormHija(new Cuenta(nom,apel,tele,ema,nivl,perfile));
 		}
 	}

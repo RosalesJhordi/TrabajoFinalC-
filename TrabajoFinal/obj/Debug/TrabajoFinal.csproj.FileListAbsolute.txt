@@ -115,3 +115,7 @@ C:\RosalesC#\TrabajoFinal\bin\Debug\System.Security.Principal.Windows.xml
 C:\RosalesC#\TrabajoFinal\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FormsProfesor.Cuenta.resources
 C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.FomsEstudiante.ListTareas.resources
+C:\RosalesC#\TrabajoFinal\bin\Debug\TrabajoFinal.exe.manifest
+C:\RosalesC#\TrabajoFinal\bin\Debug\TrabajoFinal.application
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.exe.manifest
+C:\RosalesC#\TrabajoFinal\obj\Debug\TrabajoFinal.application

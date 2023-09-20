@@ -153,6 +153,7 @@
 			// 
 			// cerrar
 			// 
+			this.cerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.cerrar.BackColor = System.Drawing.Color.Red;
 			this.cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

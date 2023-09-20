@@ -19,7 +19,6 @@ namespace TrabajoFinal.FomsEstudiante
 		//conexion 
 		ConexionBD conexion = new ConexionBD();
 
-		private int panelnum = 0;
 		private Color[] colores = { Color.SkyBlue, Color.White };
 		private int indiceColor = 0;
 
@@ -42,7 +41,7 @@ namespace TrabajoFinal.FomsEstudiante
 						while (reader.Read())
 						{
 							string descrip = reader["Descripcion"].ToString();
-							string fecha = reader["Fecha_Entrega"].ToString();
+							string fecha = reader["Fecha"].ToString();
 
 							// Crear un nuevo panel
 							Panel nuevoPanel = new Panel();

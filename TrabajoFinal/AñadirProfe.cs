@@ -76,7 +76,7 @@ namespace TrabajoFinal
 					imagenBytes = ms.ToArray();
 				}
 				SQLiteConnection sqlConnection = conexion.AbrirConexion();
-				string query = "INSERT INTO Profesores (Nombres, Apellidos, Telefono, Email, Contraseña, Perfil,Nivel_Encargado) VALUES (@nom, @ape, @tel, @ema, @pwd,@img,@nvl)";
+				string query = "INSERT INTO Profesores (Nombres, Apellidos, Telefono, Email, Contrasena, Perfil,Nivel_Encargado) VALUES (@nom, @ape, @tel, @ema, @pwd,@img,@nvl)";
 				using (SQLiteCommand cmd = new SQLiteCommand(query, sqlConnection))
 				{
 					cmd.Parameters.AddWithValue("@nom", nm);
