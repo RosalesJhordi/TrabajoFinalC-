@@ -570,14 +570,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrabajoFinal.exe" size="3144680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TrabajoFinal.exe" size="3145192">
       <assemblyIdentity name="TrabajoFinal" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Wsdt2MNTD7eTBucli7z3JQMX1Ys1lfxjEG+A3Z3PBn8=</dsig:DigestValue>
+        <dsig:DigestValue>gL/MuQRE90ZeL/p3Rzd6E5vxQp4Cc12xGs1McKwMopo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

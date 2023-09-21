@@ -6,7 +6,7 @@ namespace TrabajoFinal.Base_Datos
 {
 	internal class ConexionBD
 	{
-		private SQLiteConnection Conn = new SQLiteConnection("Data Source=C:\\RosalesC#\\TrabajoFinal\\Base_Datos\\BD_CM.db;Version=3;");
+		private SQLiteConnection Conn = new SQLiteConnection("Data Source=C:\\Users\\Equipo\\Desktop\\TrabajoFinalC-\\TrabajoFinalC-\\TrabajoFinal\\Base_Datos\\BD_CM.db;Version=3;");
 
 		// Método para abrir la conexión a la base de datos
 		public SQLiteConnection AbrirConexion()
